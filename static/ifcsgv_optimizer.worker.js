@@ -7,8 +7,7 @@ self.onmessage = (e) => {
 }
 
 function optimize(data, mapping) {
-    const entities = Object.keys(mapping).map(x => x.toUpperCase())
-    const entitiesRegex = entities.toString().replace(/,/g, '|')
+    const entitiesRegex = mapping.toString().toUpperCase().replace(/,/g, '|')
 
     const regex_array = [
         'IFCRELFILLSELEMENT',

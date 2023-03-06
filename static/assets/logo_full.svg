@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="279" height="64" viewBox="0 0 279 64">
+  <g id="logo_full" transform="translate(-1513 -1285)">
+    <g id="favicon" transform="translate(167)">
+      <rect id="Rectangle_3348" data-name="Rectangle 3348" width="64" height="64" transform="translate(1346 1285)" fill="none"/>
+      <g id="Group_2475" data-name="Group 2475" transform="translate(1038 996)" opacity="0.8">
+        <g id="Ellipse_40" data-name="Ellipse 40" transform="translate(313 295)" fill="none" stroke="#6565ff" stroke-width="9">
+          <circle cx="18" cy="18" r="18" stroke="none"/>
+          <circle cx="18" cy="18" r="13.5" fill="none"/>
+        </g>
+        <g id="Ellipse_41" data-name="Ellipse 41" transform="translate(331 295)" fill="none" stroke="#e65050" stroke-width="9" opacity="0.75">
+          <ellipse cx="17.5" cy="18" rx="17.5" ry="18" stroke="none"/>
+          <ellipse cx="17.5" cy="18" rx="13" ry="13.5" fill="none"/>
+        </g>
+        <g id="Ellipse_42" data-name="Ellipse 42" transform="translate(331 313)" fill="none" stroke="#b7f6ff" stroke-width="9" opacity="0.75">
+          <circle cx="17.5" cy="17.5" r="17.5" stroke="none"/>
+          <circle cx="17.5" cy="17.5" r="13" fill="none"/>
+        </g>
+        <g id="Ellipse_43" data-name="Ellipse 43" transform="translate(313 313)" fill="none" stroke="#e15cbd" stroke-width="9" opacity="0.75">
+          <ellipse cx="18" cy="17.5" rx="18" ry="17.5" stroke="none"/>
+          <ellipse cx="18" cy="17.5" rx="13.5" ry="13" fill="none"/>
+        </g>
+      </g>
+    </g>
+    <text id="IFC-Extractor" transform="translate(1584 1328)" fill="#5883c9" font-size="30" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">IFC-Extractor</tspan></text>
+  </g>
+</svg>

@@ -77,10 +77,53 @@ async function run() {
     progress = 10;
     progress_status = 'Reading File';
 
+    //Worker require an array of all IFC entities to be extracted.
+    //ifcsg_mapping.json is an object with pset and pname data from IFC-SG Specification,
+
+    //To convert mapping to array using ifcsg_mapping.json:
+    //const mapping = Object.keys(mapping_data).map((x) => x.toUpperCase());
+
+    //Therefore, it can also be written like this:
+    const mapping = [
+        'IfcBeam',
+        'IfcBuilding',
+        'IfcBuildingElementProxy',
+        'IfcBuildingStorey',
+        'IfcBuildingSystem',
+        'IfcCivilElement',
+        'IfcColumn',
+        'IfcDamper',
+        'IfcDistributionChamberElement',
+        'IfcDistributionSystem',
+        'IfcDoor',
+        'IfcFireSuppressionTerminal',
+        'IfcFlowMeter',
+        'IfcFooting',
+        'IfcGeographicElement',
+        'IfcInterceptor',
+        'IfcPile',
+        'IfcPipeSegment',
+        'IfcPump',
+        'IfcRailing',
+        'IfcRamp',
+        'IfcSanitaryTerminal',
+        'IfcSensor',
+        'IfcSite',
+        'IfcSlab',
+        'IfcSpace',
+        'IfcStair',
+        'IfcStairFlight',
+        'IfcTank',
+        'IfcTransportElement',
+        'IfcUnitaryControlElement',
+        'IfcWall',
+        'IfcWindow',
+    ];
+
     //Start worker and get result
     const result = await startWorker({
         config: config,
-        mapping: mapping_data,
+        mapping: mapping,
         content: content,
         filename: file.name,
     });
@@ -123,8 +166,8 @@ async function startWorker(data) {
     //Create key value pair of Capitalized and CamelCase of IfcEntity
     //[IFCBEAM=>IfcBeam, IFCBUILDING => IfcBuilding, ...]
     const nameMapping = new Map();
-    Object.entries(mapping_data).forEach((item) => {
-        nameMapping.set(item[0].toUpperCase(), item[0]);
+    data.mapping.forEach((entitiy) => {
+        nameMapping.set(entitiy.toUpperCase(), entitiy);
     });
 
     let n = 0;
@@ -667,6 +710,7 @@ footer {
                 border: none;
                 outline: none;
                 padding: 0.5rem;
+                color: inherit;
                 font-size: inherit;
                 border: 1px solid rgb(52, 62, 79);
                 border-radius: 0.5rem;
