@@ -1,0 +1,22 @@
+{
+	"name": "ifc-extractor",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"@iconify/svelte": "^3.1.0",
+		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/kit": "^1.5.0",
+		"prettier": "^2.8.4",
+		"prettier-plugin-svelte": "^2.9.0",
+		"sass": "^1.58.3",
+		"svelte": "^3.54.0",
+		"svelte-preprocess": "^5.0.1",
+		"vite": "^4.0.0"
+	},
+	"type": "module"
+}

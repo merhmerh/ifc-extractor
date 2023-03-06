@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+$accent: #2c92e7;
+$mobile: 600px;
+
+html,
+body {
+    margin: 0;
+    background-color: #1c1e22;
+    scrollbar-gutter: stable;
+    color: #c9d7e0;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 800px;
+    margin-inline: auto;
+    gap: 1rem;
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+        padding-inline: 1.5rem;
+    }
+}
+
+button {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 500;
+    background-color: #1c1e22;
+    color: $accent;
+    padding: 1rem;
+    border: 1px solid $accent;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        background-color: rgba($accent, 0.12);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    // width: 24px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 100px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #3b414f;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #2e343d;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}

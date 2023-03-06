@@ -1,0 +1,611 @@
+{
+    "IfcBeam": {
+        "pset": [
+            "SGPset_Beam",
+            "SGPset_BeamDimension",
+            "SGPset_BeamReinforcement",
+            "SGPset_ConcreteElementGeneral",
+            "SGPset_Material",
+            "SGPset_SteelConnection",
+            "SGPset_SteelElementGeneral"
+        ],
+        "pname": [
+            "BeamCage",
+            "BeamSpanType",
+            "BottomLeft",
+            "BottomMiddle",
+            "BottomRight",
+            "ConstructionMethod",
+            "Depth",
+            "InnerStirrupsLeft",
+            "InnerStirrupsMiddle",
+            "InnerStirrupsRight",
+            "InnerStirrupsTypeLeft",
+            "InnerStirrupsTypeMiddle",
+            "InnerStirrupsTypeRight",
+            "LeftConnectionDetail",
+            "LeftConnectionType",
+            "Mark",
+            "Material",
+            "MemberSection",
+            "OuterStirrupsLeft",
+            "OuterStirrupsMiddle",
+            "OuterStirrupsRight",
+            "OuterStirrupsTypeLeft",
+            "OuterStirrupsTypeMiddle",
+            "OuterStirrupsTypeRight",
+            "ReferTo2DDetail",
+            "ReferToDrawingNumber",
+            "ReinforcementSteelGrade",
+            "RightConnectionDetail",
+            "RightConnectionType",
+            "SectionFabricationMethod",
+            "SideBar",
+            "SteelGrade",
+            "StrengthClass",
+            "TopLeft",
+            "TopMiddle",
+            "TopRight",
+            "Width"
+        ]
+    },
+    "IfcBuilding": {
+        "pset": [
+            "SGPset_Building"
+        ],
+        "pname": [
+            "NumberOfWorkers",
+            "ProjectDevelopmentType"
+        ]
+    },
+    "IfcBuildingElementProxy": {
+        "pset": [
+            "SGPset_BuildingElementProxy",
+            "SGPset_BuildingElementProxyDimension"
+        ],
+        "pname": [
+            "BarrierFreeAccessibility",
+            "Depth",
+            "Diameter",
+            "FamilyParkingLot",
+            "FireExtinguisherRating",
+            "FirstHardStratumLevel",
+            "Length",
+            "Mark",
+            "TerminationLevel",
+            "TopLevel",
+            "Width"
+        ]
+    },
+    "IfcBuildingStorey": {
+        "pset": [
+            "SGPset_BuildingStorey"
+        ],
+        "pname": [
+            "RoofLevel"
+        ]
+    },
+    "IfcBuildingSystem": {
+        "pset": [
+            "SGPset_BuildingSystem"
+        ],
+        "pname": [
+            "ConstructionMethod"
+        ]
+    },
+    "IfcCivilElement": {
+        "pset": [
+            "SGPset_CivilElement"
+        ],
+        "pname": [
+            "AccessRoad",
+            "Accessway",
+            "Egress",
+            "FireEngineAccessRoad",
+            "Ingress",
+            "LoadingCapacity",
+            "RoadCategory",
+            "VehicularServiceRoad"
+        ]
+    },
+    "IfcColumn": {
+        "pset": [
+            "SGPset_Column",
+            "SGPset_ColumnDimension",
+            "SGPset_ColumnReinforcement",
+            "SGPset_ColumnStructuralLoad",
+            "SGPset_ConcreteElementGeneral",
+            "SGPset_Material",
+            "SGPset_PrecastConcreteElementGeneral",
+            "SGPset_SteelConnection",
+            "SGPset_SteelElementGeneral"
+        ],
+        "pname": [
+            "ArrangementType",
+            "Breadth",
+            "BreadthInnerStirrups",
+            "BreadthInnerStirrupsType",
+            "ColumnCage",
+            "ConnectionDetailsBottom",
+            "ConnectionDetailsTop",
+            "ConnectionTypeBottom",
+            "ConnectionTypeTop",
+            "ConstructionMethod",
+            "Diameter",
+            "EndStorey",
+            "MainRebar",
+            "Mark",
+            "Material",
+            "MemberSection",
+            "OuterStirrups",
+            "OuterStirrupsType",
+            "ReferTo2DDetail",
+            "ReferToDrawingNumber",
+            "ReinforcementSteelGrade",
+            "SectionFabricationMethod",
+            "SpliceDetail",
+            "StartingStorey",
+            "SteelGrade",
+            "StrengthClass",
+            "Width",
+            "WidthInnerStirrups",
+            "WidthInnerStirrupsType",
+            "WorkingLoad"
+        ]
+    },
+    "IfcDamper": {
+        "pset": [
+            "SGPset_Damper"
+        ],
+        "pname": [
+            "FireRating"
+        ]
+    },
+    "IfcDistributionChamberElement": {
+        "pset": [
+            "SGPset_DistributionChamberElementDimension"
+        ],
+        "pname": [
+            "Depth",
+            "Diameter",
+            "Length",
+            "Width"
+        ]
+    },
+    "IfcDistributionSystem": {
+        "pset": [
+            "SGPset_Material",
+            "SGPset_PipeSegmentDimension"
+        ],
+        "pname": [
+            "Diameter",
+            "Gradient",
+            "Length",
+            "Material"
+        ]
+    },
+    "IfcDoor": {
+        "pset": [
+            "Pset_DoorCommon",
+            "SGPset_DoorDimension"
+        ],
+        "pname": [
+            "FireRating",
+            "Height",
+            "Width"
+        ]
+    },
+    "IfcFireSuppressionTerminal": {
+        "pset": [
+            "SGPset_FireSuppressionTerminal"
+        ],
+        "pname": [
+            "Hose_NominalDiameter",
+            "ID",
+            "Private",
+            "Public"
+        ]
+    },
+    "IfcFlowMeter": {
+        "pset": [
+            "Pset_FlowMeterOccurrence",
+            "SGPset_FlowMeter",
+            "SGPset_FlowMeterDimension"
+        ],
+        "pname": [
+            "Capacity",
+            "Diameter",
+            "Length",
+            "Purpose"
+        ]
+    },
+    "IfcFooting": {
+        "pset": [
+            "SGPset_ConcreteElementGeneral",
+            "SGPset_Footing",
+            "SGPset_FootingDimension",
+            "SGPset_FootingReinforcement",
+            "SGPset_FoundationStructuralLoad",
+            "SGPset_Material"
+        ],
+        "pname": [
+            "BottomDistribution",
+            "BottomMain",
+            "Breadth",
+            "DA1-1_BearingCapacity",
+            "DA1-2_BearingCapacity",
+            "Depth",
+            "Mark",
+            "Material",
+            "ReferTo2DDetail",
+            "ReferToDrawingNumber",
+            "ReinforcementSteelGrade",
+            "SideBar",
+            "SoilVerificationTest",
+            "Stirrups",
+            "StirrupsType",
+            "StrengthClass",
+            "TopDistribution",
+            "TopMain",
+            "Width",
+            "WorkingLoad"
+        ]
+    },
+    "IfcGeographicElement": {
+        "pset": [
+            "SGPset_GeographicElement",
+            "SGPset_GeographicElementDimension"
+        ],
+        "pname": [
+            "ApprovedSoilMixture",
+            "Area",
+            "GIS_AllowableMasterPlanUse",
+            "GIS_Name",
+            "GIS_PlanningArea",
+            "GIS_Region",
+            "GIS_Scheme",
+            "Girth",
+            "Height",
+            "ReasonForRemoval",
+            "RoadCategory",
+            "Species",
+            "Status",
+            "TreeNumber",
+            "Turf"
+        ]
+    },
+    "IfcInterceptor": {
+        "pset": [
+            "SGPset_Interceptor",
+            "SGPset_InterceptorDimension"
+        ],
+        "pname": [
+            "ComplyToPUBStandardDrawing",
+            "Height",
+            "InvertLevel",
+            "Length",
+            "ReferToDrawingNumber",
+            "TopLevel",
+            "Width"
+        ]
+    },
+    "IfcPile": {
+        "pset": [
+            "SGPset_ConcreteElementGeneral",
+            "SGPset_Material",
+            "SGPset_Pile",
+            "SGPset_PileDimension",
+            "SGPset_PileReinforcement",
+            "SGPset_PileStructuralLoad",
+            "SGPset_SteelElementGeneral"
+        ],
+        "pname": [
+            "BoreholeRef",
+            "Breadth",
+            "ConstructionMethod",
+            "DA1-1_CompressionCapacity",
+            "DA1-1_CompressionDesignLoad",
+            "DA1-1_TensionCapacity",
+            "DA1-1_TensionDesignLoad",
+            "DA1-2_CompressionCapacity",
+            "DA1-2_CompressionDesignLoad",
+            "DA1-2_TensionCapacity",
+            "DA1-2_TensionDesignLoad",
+            "Diameter",
+            "HeadLevel",
+            "Length",
+            "MainRebar",
+            "MaintainedLoadTestPile",
+            "Mark",
+            "Material",
+            "MemberSection",
+            "MinEmbedmentIntoBearingLayer_SPT_MoreThan_100N",
+            "MinEmbedmentIntoBearingLayer_SPT_MoreThan_60N",
+            "MinRockSocketingLength",
+            "NegativeSkinFriction",
+            "NonDestructiveTestPile",
+            "PileType",
+            "RapidLoadTestPile",
+            "ReinforcementLength",
+            "ReinforcementSteelGrade",
+            "SteelGrade",
+            "Stirrups",
+            "StrengthClass",
+            "StructuralCompressionCapacity",
+            "StructuralTensionCapacity",
+            "ToeLevel",
+            "ULTTestPile",
+            "Width",
+            "WorkingLoadTestPile"
+        ]
+    },
+    "IfcPipeSegment": {
+        "pset": [
+            "SGPset_PipeSegment",
+            "SGPset_PipeSegmentDimension"
+        ],
+        "pname": [
+            "BeddingType",
+            "Height",
+            "Length",
+            "LoadBearing",
+            "Thickness",
+            "Width"
+        ]
+    },
+    "IfcPump": {
+        "pset": [
+            "SGPset_Pump"
+        ],
+        "pname": [
+            "Capacity",
+            "Duty",
+            "Standby"
+        ]
+    },
+    "IfcRailing": {
+        "pset": [
+            "SGPset_Material",
+            "SGPset_RailingDimension"
+        ],
+        "pname": [
+            "Height",
+            "LateralLoad",
+            "Material"
+        ]
+    },
+    "IfcRamp": {
+        "pset": [
+            "SGPset_Ramp",
+            "SGPset_RampDimension"
+        ],
+        "pname": [
+            "Accessway",
+            "BarrierFreeAccessibility",
+            "Egress",
+            "Gradient",
+            "Ingress",
+            "TransitionRamp",
+            "Width"
+        ]
+    },
+    "IfcSanitaryTerminal": {
+        "pset": [
+            "SGPset_SanitaryTerminal"
+        ],
+        "pname": [
+            "ChildrenFriendly"
+        ]
+    },
+    "IfcSensor": {
+        "pset": [
+            "SGPset_Sensor"
+        ],
+        "pname": [
+            "Declaration",
+            "SmokeDetectorType"
+        ]
+    },
+    "IfcSite": {
+        "pset": [
+            "Pset_SiteCommon",
+            "SGPset_Site"
+        ],
+        "pname": [
+            "NumberOfWorkers",
+            "ProjectDevelopmentType",
+            "TotalArea"
+        ]
+    },
+    "IfcSlab": {
+        "pset": [
+            "SGPset_ConcreteElementGeneral",
+            "SGPset_Material",
+            "SGPset_Slab",
+            "SGPset_SlabDimension",
+            "SGPset_SlabReinforcement"
+        ],
+        "pname": [
+            "BottomDistribution",
+            "BottomMain",
+            "ConstructionMethod",
+            "Length",
+            "Mark",
+            "Material",
+            "ReferTo2DDetail",
+            "ReferToDrawingNumber",
+            "ReinforcementSteelGrade",
+            "ShelterUsage",
+            "SlabType",
+            "Stirrups",
+            "StirrupsType",
+            "StrengthClass",
+            "Thickness",
+            "TopDistribution",
+            "TopMain",
+            "WeldedMesh",
+            "Width"
+        ]
+    },
+    "IfcSpace": {
+        "pset": [
+            "SGPset_Space",
+            "SGPset_SpaceArea_Connectivity",
+            "SGPset_SpaceArea_GFA",
+            "SGPset_SpaceArea_Landscape",
+            "SGPset_SpaceArea_Strata",
+            "SGPset_SpaceDimension",
+            "SGPset_SpaceOccupancyRequirements",
+            "SGPset_SpaceThermalRequirements"
+        ],
+        "pname": [
+            "ACN_ActivityGeneratingUseType",
+            "ACN_CloseTime",
+            "ACN_ConnectivityType",
+            "ACN_IsOpen24Hours",
+            "ACN_IsPavingSpecified",
+            "ACN_OpenTime",
+            "ACN_PavingSpecification",
+            "AGF_BonusGFAType",
+            "AGF_DetailedUse",
+            "AGF_DevelopmentUse",
+            "AGF_Name",
+            "AGF_Note",
+            "AGF_UnitNumber",
+            "ALS_GreeneryFeatures",
+            "ALS_LandscapeType",
+            "AST_AreaType",
+            "AST_AssociatedTo",
+            "AST_Extg_StrataLotNumber",
+            "AST_LegalArea",
+            "AST_Prop_StrataLotNumber",
+            "Area",
+            "BarrierFreeAccessibility",
+            "Height",
+            "NormalVentilationMode",
+            "OccupantLoad",
+            "Retrofit",
+            "SpaceName",
+            "TwentyFourHourMannedStation",
+            "Volume"
+        ]
+    },
+    "IfcStair": {
+        "pset": [
+            "Pset_StairCommon",
+            "SGPset_ConcreteElementGeneral",
+            "SGPset_Stair",
+            "SGPset_StairDimension",
+            "SGPset_StairReinforcement",
+            "SGPset_StairSteelConnection",
+            "SGPset_SteelElementGeneral"
+        ],
+        "pname": [
+            "BottomDistribution",
+            "BottomMain",
+            "ConnectionDetailsBottom",
+            "ConnectionDetailsTop",
+            "ConnectionTypeBottom",
+            "ConnectionTypeTop",
+            "ConstructionMethod",
+            "FireExit",
+            "Mark",
+            "ReferTo2DDetail",
+            "ReferToDrawingNumber",
+            "ReinforcementSteelGrade",
+            "SectionFabricationMethod",
+            "SteelGrade",
+            "StrengthClass",
+            "Thickness",
+            "TopDistribution",
+            "TopMain",
+            "Width"
+        ]
+    },
+    "IfcStairFlight": {
+        "pset": [
+            "Pset_StairFlightCommon",
+            "SGPset_StairFlight"
+        ],
+        "pname": [
+            "ConstructionMethod",
+            "NumberOfRiser",
+            "RiserHeight",
+            "TreadLength"
+        ]
+    },
+    "IfcTank": {
+        "pset": [
+            "Pset_TankTypeCommon",
+            "SGPset_Tank",
+            "SGPset_TankDimension"
+        ],
+        "pname": [
+            "Diameter",
+            "Height",
+            "IsPotable",
+            "Length",
+            "NominalCapacity",
+            "Thickness",
+            "Width"
+        ]
+    },
+    "IfcTransportElement": {
+        "pset": [
+            "SGPset_TransportElement",
+            "SGPset_TransportElementTypeLiftDimension"
+        ],
+        "pname": [
+            "BarrierFreeAccessibility",
+            "Length",
+            "Width"
+        ]
+    },
+    "IfcUnitaryControlElement": {
+        "pset": [
+            "SGPset_UnitaryControlElement"
+        ],
+        "pname": [
+            "PWCS_Flushing"
+        ]
+    },
+    "IfcWall": {
+        "pset": [
+            "Pset_WallCommon",
+            "SGPset_ConcreteElementGeneral",
+            "SGPset_Material",
+            "SGPset_PrecastConcreteElementGeneral",
+            "SGPset_Wall",
+            "SGPset_WallDimension",
+            "SGPset_WallReinforcement"
+        ],
+        "pname": [
+            "ArrangementType",
+            "ConstructionMethod",
+            "FireRating",
+            "Height",
+            "HorizontalRebar",
+            "Length",
+            "Mark",
+            "Material",
+            "ReferTo2DDetail",
+            "ReferToDrawingNumber",
+            "ReinforcementSteelGrade",
+            "ShelterUsage",
+            "Stirrups",
+            "StirrupsType",
+            "StrengthClass",
+            "Thickness",
+            "VerticalRebar"
+        ]
+    },
+    "IfcWindow": {
+        "pset": [
+            "SGPset_WindowDimension"
+        ],
+        "pname": [
+            "InnerDiameter",
+            "OuterDiameter"
+        ]
+    }
+}
