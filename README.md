@@ -2,6 +2,8 @@
 
 Multi-Threaded Web Worker for extracting properties and parameter from IFC Model.
 
+[Sandbox Demo Page](https://merhmerh.github.io/ifc-extractor/)
+
 ## Features
 
 -   🌐 Written in vanilla Javascript
