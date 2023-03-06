@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@iconify/svelte': ^3.1.0
   '@sveltejs/adapter-auto': ^2.0.0
+  '@sveltejs/adapter-static': ^2.0.1
   '@sveltejs/kit': ^1.5.0
   prettier: ^2.8.4
   prettier-plugin-svelte: ^2.9.0
@@ -14,6 +15,7 @@ specifiers:
 devDependencies:
   '@iconify/svelte': 3.1.0_svelte@3.55.1
   '@sveltejs/adapter-auto': 2.0.0_@sveltejs+kit@1.10.0
+  '@sveltejs/adapter-static': 2.0.1_@sveltejs+kit@1.10.0
   '@sveltejs/kit': 1.10.0_svelte@3.55.1+vite@4.1.4
   prettier: 2.8.4
   prettier-plugin-svelte: 2.9.0_jrsxveqmsx2uadbqiuq74wlc4u
@@ -250,6 +252,14 @@ packages:
     dependencies:
       '@sveltejs/kit': 1.10.0_svelte@3.55.1+vite@4.1.4
       import-meta-resolve: 2.2.1
+    dev: true
+
+  /@sveltejs/adapter-static/2.0.1_@sveltejs+kit@1.10.0:
+    resolution: {integrity: sha512-o5/q3YwD/ErxYCFlK1v3ydvldyNKk1lh3oeyxn4mhz+Pkbx/uuxhzmbOpytTlp5aVqNHDVsb04xadUzOFCDDzw==}
+    peerDependencies:
+      '@sveltejs/kit': ^1.5.0
+    dependencies:
+      '@sveltejs/kit': 1.10.0_svelte@3.55.1+vite@4.1.4
     dev: true
 
   /@sveltejs/kit/1.10.0_svelte@3.55.1+vite@4.1.4:

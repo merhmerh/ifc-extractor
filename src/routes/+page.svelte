@@ -312,7 +312,7 @@ function prettyJSON(obj) {
 {/if}
 
 <header>
-    <a href="https://github.com">
+    <a href="https://github.com/merhmerh/ifc-extractor">
         <Icon icon="mdi:github" width="32" />
     </a>
 </header>
@@ -373,8 +373,8 @@ function prettyJSON(obj) {
 <footer>
     <span>IFC-Extractor, 2023</span>
     <div class="links">
-        <a href="/">MIT License</a>
-        <a href="/">GitHub</a>
+        <a href="https://github.com/merhmerh/ifc-extractor/blob/main/LICENSE">MIT License</a>
+        <a href="https://github.com/merhmerh/ifc-extractor">GitHub</a>
         <a href="https://code.builtsearch.com/ifcsg-validator">IFC-SG Validator</a>
     </div>
     <span>An initiative by BIMLife</span>
