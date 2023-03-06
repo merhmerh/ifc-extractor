@@ -18,7 +18,7 @@ The typical format for IFC file is STEP, where each line contain a single source
 
 IFC Extractor extract data from IFC File and Output result in JSON format, containing every element with its parameters and properties.
 
-Ifc Extractor is used in [IFC-SG Validator](https://code.builtsearch.com/ifcsg-validator), to validate IFC Model for IFC-SG Compliance.
+Ifc Extractor is used in [IFC-SG Validator](https://code.builtsearch.com/ifcsg-validator) (under development), to validate IFC Model for IFC-SG Compliance.
 
 ## Process Overview
 
