@@ -2,19 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="./favicon.png" />
+    <link rel="icon" href="/ifc-extractor/favicon.png" />
     <meta name="viewport" content="width=device-width" />
     <title>IFC Extractor</title>
     <meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_page.6bc3c857.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.def48929.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index.dca506ae.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.0cb19c3a.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.36fd7967.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/layout.svelte.fb2ce173.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/_page.svelte.3815afba.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/_page.js.9c5eea7e.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_page.da46b06b.js">
+		<link href="/ifc-extractor/_app/immutable/assets/_page.6bc3c857.css" rel="stylesheet">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/start.f8e5d728.js">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/chunks/index.dca506ae.js">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/chunks/singletons.1621f62f.js">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/chunks/paths.ee94649c.js">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/app.b5f949ce.js">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/layout.svelte.fb2ce173.js">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/_page.svelte.ab6d0835.js">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/_page.js.9c5eea7e.js">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/chunks/_page.da46b06b.js">
   </head>
   <body data-sveltekit-preload-data="hover">
     <div style="display: contents">
@@ -25,13 +26,13 @@
 <header><a href="https://github.com/merhmerh/ifc-extractor"></a></header>
 
 <div class="hero">
-    <div class="title"><img style="transform:rotateZ(0deg)" src="/assets/ifcsgv-logo.svg" alt="logo">
+    <div class="title"><img style="transform:rotateZ(0deg)" src="/ifc-extractor/assets/ifcsgv-logo.svg" alt="logo">
         <h1>IFC-Extractor</h1></div>
     <span>Multi-Threaded Web Worker for extracting properties and parameter from IFC Model.</span></div>
 
 <div class="demo"><h2>🧪 Demo</h2>
 
-    <div class="uploader"><button class="uploadbox"><div class="main"><img src="assets/ifc-logo.svg" alt="upload IFC">
+    <div class="uploader"><button class="uploadbox"><div class="main"><img src="/ifc-extractor/assets/ifc-logo.svg" alt="upload IFC">
                     <span>Upload IFC</span></div>
                 <input type="file" accept=".ifc"></button></div></div>
 
@@ -49,19 +50,20 @@
 			
 			<script>
 				{
-					__sveltekit_iafyig = {
+					__sveltekit_8ro8z6 = {
 						env: {},
-						base: new URL(".", location).pathname.slice(0, -1),
+						assets: "/ifc-extractor",
+						base: "/ifc-extractor",
 						element: document.currentScript.parentElement
 					};
 
 					const data = [null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.def48929.js"),
-						import("./_app/immutable/entry/app.36fd7967.js")
+						import("/ifc-extractor/_app/immutable/entry/start.f8e5d728.js"),
+						import("/ifc-extractor/_app/immutable/entry/app.b5f949ce.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_iafyig.element, {
+						kit.start(app, __sveltekit_8ro8z6.element, {
 							node_ids: [0, 2],
 							data,
 							form: null,

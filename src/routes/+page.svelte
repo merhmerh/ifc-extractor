@@ -3,6 +3,8 @@ import { onMount } from 'svelte';
 import Modal from './Modal.svelte';
 import Icon from '@iconify/svelte';
 import { fly } from 'svelte/transition';
+import { base } from '$app/paths';
+
 import mapping_data from './ifcsg_mapping.json';
 
 let spin = 0;
@@ -22,6 +24,7 @@ let config = {
 };
 
 onMount(() => {
+    console.log(base);
     animate();
     const json = {
         Note: 'This is a demo result, upload IFC model to see your result!',
@@ -363,7 +366,7 @@ function prettyJSON(obj) {
 <div class="hero">
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <div class="title" on:click={animate}>
-        <img style="transform:rotateZ({spin}deg)" src="/assets/ifcsgv-logo.svg" alt="logo" />
+        <img style="transform:rotateZ({spin}deg)" src="{base}/assets/ifcsgv-logo.svg" alt="logo" />
         <h1>IFC-Extractor</h1>
     </div>
     <span>Multi-Threaded Web Worker for extracting properties and parameter from IFC Model.</span>
@@ -381,7 +384,7 @@ function prettyJSON(obj) {
                     ifcInput.value = null;
                 }}>
                 <div class="main">
-                    <img src="assets/ifc-logo.svg" alt="upload IFC" />
+                    <img src="{base}/assets/ifc-logo.svg" alt="upload IFC" />
                     <span>Upload IFC</span>
                 </div>
                 <input bind:this={ifcInput} on:change={(e) => ifcUploaded(e)} type="file" accept=".ifc" />
