@@ -24,7 +24,6 @@ let config = {
 };
 
 onMount(() => {
-    console.log(base);
     animate();
     const json = {
         Note: 'This is a demo result, upload IFC model to see your result!',
@@ -142,7 +141,7 @@ async function run() {
 
 //trigger worker
 async function startWorker(data) {
-    const optimizer_worker = new Worker('/ifcsgv_optimizer.worker.js');
+    const optimizer_worker = new Worker(`${base}/ifcsgv_optimizer.worker.js`);
 
     //Start optimizer worker
     optimizer_worker.postMessage({
@@ -191,7 +190,7 @@ async function startWorker(data) {
                 const entity = tasks[0];
                 tasks = tasks.filter((x) => x !== entity.toUpperCase());
                 const entityMap = optimizerResult.entitiesMap[entity.toUpperCase()];
-                const extractor_worker = new Worker('/ifcsgv_extractor.worker.js');
+                const extractor_worker = new Worker(`${base}/ifcsgv_extractor.worker.js`);
 
                 extractor_worker.postMessage({
                     name: 'extract',
