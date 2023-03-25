@@ -1,0 +1,20 @@
+{
+    "Note": "This is a demo result, upload IFC model to see your result!",
+    "IfcStairFlight": {
+        "Entity": "IfcStairFlight",
+        "Guid": "abVtP6Iv9t92EzKfdH28O",
+        "ObjectType": "Monolithic Run:Monolithic Run_PC",
+        "ElementId": "4409048",
+        "Pset_EnvironmentalImpactIndicators": {
+            "Reference": "Monolithic Run_PC"
+        },
+        "Pset_StairFlightCommon": {
+            "NosingLength": 0,
+            "Reference": "Monolithic Run_PC",
+            "NumberOfRiser": 8,
+            "NumberOfTreads": 8,
+            "RiserHeight": 174.999999999999,
+            "TreadLength": 275
+        }
+    }
+}

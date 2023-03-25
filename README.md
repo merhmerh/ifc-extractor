@@ -10,64 +10,63 @@ Multi-Threaded Web Worker for extracting properties and parameter from IFC Model
 -   🛒 Zero Dependencies
 -   💻 Run Locally on the browser
 -   🌿 Multi-Threaded
--   ⚒️ Configurable
 
 ## Concept
 
-The typical format for IFC file is STEP, where each line contain a single source of info.
+The typical format for an IFC file is STEP, where each line contains a single source of information.
 
-IFC Extractor extract data from IFC File and Output result in JSON format, containing every element with its parameters and properties.
+The IFC Extractor extracts data from an IFC file and outputs the results in JSON format, containing every element with its parameters and properties.
 
-Ifc Extractor is used in [IFC-SG Validator](https://code.builtsearch.com/ifcsg-validator) (under development), to validate IFC Model for IFC-SG Compliance.
+The IFC Extractor is used in the [IFC-SG Validator](https://code.builtsearch.com/ifcsg-validator) to validate an IFC model for IFC-SG compliance.
 
 ## Process Overview
 
-IFC Extractor uses 2 web worker file:
+The IFC Extractor uses a recursive web worker that automatically processes your IFC model. The two main processes are:
 
 1. Optimizer
 2. Extractor
 
-Optimzer takes in raw IFC File as text, filter unecessary lines (such as geometry and spatial relationship) and return 3 set of key-value pairs
+The optimizer takes in the raw IFC file as text, filters unnecessary lines (such as geometry and spatial relationships), and returns three sets of key-value pairs:
 
 1. Entities Map
 2. Relationship Map
 3. PropertySet Map
 
-Once optimizer completed the job, multiple instances of extractor can be trigged. Each instance will use a single processing thread.
+Once the optimizer has completed its job, multiple instances of the extractor can be triggered. Each instance will use a single processing thread.
 
-Each extractor work on a single entity found in Entities Map, and get each element parameters and properties from Relationship Map and PropertySet Map.
+Each extractor works on a single entity found in the Entities Map and maps each element's parameters and properties with data from the Relationship and PropertySet Map.
 
-Use promise to wait for all results.
+Promises are used to wait for all results.
 
-## Configuration
+## Processing Time
 
-IFC Extractor can be configured to reduce processing time at the cost of not checking every element.
+The IFC Extractor has been optimized for efficient processing of IFC models, allowing for quick processing times. On a modern CPU, it can process files that are less than 50 MB in less than 5 seconds.
 
-| Configuration | Data Type | Comments                                                                                                               |
-| ------------- | --------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Sample Size   | Float     | 1 = check 100%, 0.2 = check 20%                                                                                        |
-| Maximum       | Integer   | Maximum number of elements to be<br /> checked after factoring sample size.<br /> Set as 0 to check up to sample size. |
-| Minimum       | Integer   | Minimum number of elements to be checked,<br /> ignoring sample size factor.                                           |
-
-For file smaller than 50mb, performance is unliekly to be an issue.
-
-For large file > 100mb, it is common to have over thousands of walls, setting a maximum limit to cap number of elements to be checked will improve performance.
+However, the processing time increases exponentially with the size of the IFC Model.
 
 ## Demo
 
-This demo is built with SvelteKit.
+This demo is built with Svelte and SvelteKit.
 
-#### Install dependencies
+### Install dependencies
+
+Using npm or pnpm
 
 ```
 npm install
-pnpm i
 ```
 
-#### Start
+```
+pnpm install
+```
+
+### Start
 
 ```
 npm run dev
+```
+
+```
 pnpm dev
 ```
 

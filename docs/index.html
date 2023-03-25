@@ -4,16 +4,24 @@
     <meta charset="utf-8" />
     <link rel="icon" href="/ifc-extractor/favicon.png" />
     <meta name="viewport" content="width=device-width" />
-    <title>IFC Extractor</title>
+    <title>IFC Extractor • Extract Data from IFC Model</title>
+    <meta property="og:title" content="IFC Extractor • Extract Data from IFC Model" />
+    <meta property="og:type" content="application" />
+    <meta property="og:image" content="https://merhmerh.github.io/ifc-extractor/assets/ogimage.jpg" />
+    <meta property="og:url" content="https://merhmerh.github.io/ifc-extractor/" />
+    <meta property="og:description" content="IFC Extractor is tool for extracting data from IFC files and converting it into JSON format. With optimized processing, it quickly extracts every element, parameter, and property in your IFC model. It use it IFC-SG Validator to validate your IFC model for IFC-SG compliance and ensure your data is structured and ready for submission." />
+    <meta name="description" content="IFC Extractor is tool for extracting data from IFC files and converting it into JSON format. With optimized processing, it quickly extracts every element, parameter, and property in your IFC model. It use it IFC-SG Validator to validate your IFC model for IFC-SG compliance and ensure your data is structured and ready for submission." />
+    <meta name="keywords" content="IFC Extractor, IFC models, data extraction, data validation, IFC-SG compliance" />
+
     <meta http-equiv="content-security-policy" content="">
-		<link href="/ifc-extractor/_app/immutable/assets/_page.6bc3c857.css" rel="stylesheet">
-		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/start.1e5af8a5.js">
-		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/chunks/index.dca506ae.js">
-		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/chunks/singletons.19f68093.js">
-		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/chunks/paths.935dc4f7.js">
-		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/app.1dddccb2.js">
-		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/layout.svelte.fb2ce173.js">
-		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/_page.svelte.96270f29.js">
+		<link href="/ifc-extractor/_app/immutable/assets/_page.95de5391.css" rel="stylesheet">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/start.785b7d4f.js">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/chunks/index.84a2c5aa.js">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/chunks/singletons.7221007c.js">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/chunks/paths.df73d602.js">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/app.334f6ede.js">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/layout.svelte.edb66e5b.js">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/_page.svelte.fd6aa1f3.js">
 		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/_page.js.9c5eea7e.js">
 		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/chunks/_page.da46b06b.js">
   </head>
@@ -21,13 +29,10 @@
     <div style="display: contents">
 
 
-
-
 <header><a href="https://github.com/merhmerh/ifc-extractor"></a></header>
 
-<div class="hero">
-    <div class="title"><img style="transform:rotateZ(0deg)" src="/ifc-extractor/assets/ifcsgv-logo.svg" alt="logo">
-        <h1>IFC-Extractor</h1></div>
+<div class="hero"><button class="title"><img style="transform:rotateZ(0deg)" src="/ifc-extractor/assets/ifcsgv-logo.svg" alt="logo">
+        <h1>IFC-Extractor</h1></button>
     <span>Multi-Threaded Web Worker for extracting properties and parameter from IFC Model.</span></div>
 
 <div class="demo"><h2>🧪 Demo</h2>
@@ -35,9 +40,28 @@
     <div class="uploader"><button class="uploadbox"><div class="main"><img src="/ifc-extractor/assets/ifc-logo.svg" alt="upload IFC">
                     <span>Upload IFC</span></div>
                 <input type="file" accept=".ifc"></button></div></div>
-
-<div id="result" class="result"><h2>📜 Result</h2>
-    <div class="wrapper"></div></div>
+<div id="result" class="result"><h2>📜 Result
+        </h2>
+    <div class="wrapper"><pre><!-- HTML_TAG_START -->{
+  <span class=json-key>Note</span>: <span class=json-string>"This is a demo result, upload IFC model to see your result!"</span>,
+  <span class=json-key>IfcStairFlight</span>: {
+    <span class=json-key>Entity</span>: <span class=json-string>"IfcStairFlight"</span>,
+    <span class=json-key>Guid</span>: <span class=json-string>"abVtP6Iv9t92EzKfdH28O"</span>,
+    <span class=json-key>ObjectType</span>: <span class=json-string>"Monolithic Run:Monolithic Run_PC"</span>,
+    <span class=json-key>ElementId</span>: <span class=json-string>"4409048"</span>,
+    <span class=json-key>Pset_EnvironmentalImpactIndicators</span>: {
+      <span class=json-key>Reference</span>: <span class=json-string>"Monolithic Run_PC"</span>
+    },
+    <span class=json-key>Pset_StairFlightCommon</span>: {
+      <span class=json-key>NosingLength</span>: <span class=json-value>0</span>,
+      <span class=json-key>Reference</span>: <span class=json-string>"Monolithic Run_PC"</span>,
+      <span class=json-key>NumberOfRiser</span>: <span class=json-value>8</span>,
+      <span class=json-key>NumberOfTreads</span>: <span class=json-value>8</span>,
+      <span class=json-key>RiserHeight</span>: <span class=json-value>174.999999999999</span>,
+      <span class=json-key>TreadLength</span>: <span class=json-value>275</span>
+    }
+  }
+}<!-- HTML_TAG_END --></pre></div></div>
 
 <footer><span>IFC-Extractor, 2023</span>
     <div class="links"><a href="https://github.com/merhmerh/ifc-extractor/blob/main/LICENSE">MIT License</a>
@@ -50,7 +74,7 @@
 			
 			<script>
 				{
-					__sveltekit_1ldh1x0 = {
+					__sveltekit_1tnpg9f = {
 						env: {},
 						assets: "/ifc-extractor",
 						base: "/ifc-extractor",
@@ -60,10 +84,10 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("/ifc-extractor/_app/immutable/entry/start.1e5af8a5.js"),
-						import("/ifc-extractor/_app/immutable/entry/app.1dddccb2.js")
+						import("/ifc-extractor/_app/immutable/entry/start.785b7d4f.js"),
+						import("/ifc-extractor/_app/immutable/entry/app.334f6ede.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_1ldh1x0.element, {
+						kit.start(app, __sveltekit_1tnpg9f.element, {
 							node_ids: [0, 2],
 							data,
 							form: null,

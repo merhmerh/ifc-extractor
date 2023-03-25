@@ -1,10 +1,8 @@
 <script>
-import { onMount } from 'svelte';
-import Modal from './Modal.svelte';
+import { onMount, tick } from 'svelte';
 import Icon from '@iconify/svelte';
-import { fly } from 'svelte/transition';
 import { base } from '$app/paths';
-
+import defaultResult from './defaultResult.json';
 import mapping_data from './ifcsg_mapping.json';
 
 let spin = 0;
@@ -12,16 +10,8 @@ let ifcInput,
     file,
     processing,
     ifcResult,
-    showModal = false,
-    progress = 0,
-    progress_status = 'Reading File',
-    progress_count = '',
+    fileName,
     threads = 6;
-let config = {
-    sampleSize: 0.25,
-    max: 50,
-    min: 12,
-};
 
 onMount(() => {
     animate();
@@ -46,7 +36,6 @@ onMount(() => {
         },
     };
     threads = window.navigator.hardwareConcurrency;
-    ifcResult = json;
 });
 
 //Core Functions
@@ -54,18 +43,20 @@ onMount(() => {
 //on file upload
 function ifcUploaded(e) {
     file = e.target.files[0];
-    showModal = true;
+    console.log(file);
+    fileName = file.name;
+    console.log(fileName);
+    run();
 }
 
 //start processing
 async function run() {
-    showModal = false;
     processing = true;
 
     const t0 = performance.now();
 
     //read uploaded IFC file as text
-    const content = await new Promise((resolve, reject) => {
+    const ifc = await new Promise((resolve, reject) => {
         const fileReader = new FileReader();
         fileReader.readAsText(file);
         fileReader.onload = () => {
@@ -76,9 +67,6 @@ async function run() {
         };
     });
 
-    progress = 10;
-    progress_status = 'Reading File';
-
     //Worker require an array of all IFC entities to be extracted.
     //ifcsg_mapping.json is an object with pset and pname data from IFC-SG Specification,
 
@@ -86,7 +74,7 @@ async function run() {
     //const mapping = Object.keys(mapping_data).map((x) => x.toUpperCase());
 
     //Therefore, it can also be written like this:
-    const mapping = [
+    const entities = [
         'IfcBeam',
         'IfcBuilding',
         'IfcBuildingElementProxy',
@@ -122,148 +110,42 @@ async function run() {
         'IfcWindow',
     ];
 
-    //Start worker and get result
-    const result = await startWorker({
-        config: config,
-        mapping: mapping,
-        content: content,
-        filename: file.name,
-    });
+    const worker = new Worker(`${base}/ifcsg-extractor.worker.js`);
+    const result = await new Promise((resolve) => {
+        worker.postMessage({
+            name: 'start',
+            ifc: ifc,
+            entities: entities,
+            threads: 16,
+        });
 
-    const t1 = performance.now();
-    console.log(`Completed In ${((t1 - t0) / 1000).toFixed(2)}ms`);
-    //artificially wait out 1s to smooth out transition
-    await timeout(1000);
-    ifcResult = result;
-    processing = false;
-    progress = 0;
-}
+        worker.onmessage = (e) => {
+            if (e.data.message) {
+                console.log(e.data.message);
+            }
 
-//trigger worker
-async function startWorker(data) {
-    const optimizer_worker = new Worker(`${base}/ifcsgv_optimizer.worker.js`);
+            if (e.data.name == 'extraction') {
+                console.log('extraction complete');
+            }
 
-    //Start optimizer worker
-    optimizer_worker.postMessage({
-        name: 'optimize',
-        workerData: data,
-    });
-
-    //get result from optimizer
-    const optimizerResult = await new Promise((resolve) => {
-        optimizer_worker.onmessage = (e) => {
-            if (e.data.name == 'optimize') {
-                progress = 20;
-                progress_status = 'Optimizing Data Structure';
-                optimizer_worker.terminate();
-                resolve(e.data);
+            if (e.data.complete) {
+                worker.terminate();
+                resolve(e.data.result);
             }
         };
     });
 
-    //Get IfcEntities as Array
-    //[IfcBuildingElementProxy, IfcBeams, ...]
-    let tasks = Object.entries(optimizerResult.entitiesMap).map((x) => x[0]);
+    const t1 = performance.now();
+    console.log(`Completed In ${((t1 - t0) / 1000).toFixed(2)}s`);
 
-    //Create key value pair of Capitalized and CamelCase of IfcEntity
-    //[IFCBEAM=>IfcBeam, IFCBUILDING => IfcBuilding, ...]
-    const nameMapping = new Map();
-    data.mapping.forEach((entitiy) => {
-        nameMapping.set(entitiy.toUpperCase(), entitiy);
+    console.log(result);
+    processing = false;
+    await timeout(500);
+    ifcResult = result;
+    await tick();
+    document.querySelector('#result').scrollIntoView({
+        behavior: 'smooth',
     });
-
-    let n = 0;
-    let working = null;
-    const availableThreads = threads;
-    const extractorResult = [];
-
-    const promises = [];
-    //start worker for each thread
-    for (let i = 0; i < availableThreads; i++) {
-        if (!tasks[0]) {
-            continue;
-        }
-
-        //trigger extractor worker for each entity
-        const runTask = new Promise((resolve) => {
-            function startWorker() {
-                const entity = tasks[0];
-                tasks = tasks.filter((x) => x !== entity.toUpperCase());
-                const entityMap = optimizerResult.entitiesMap[entity.toUpperCase()];
-                const extractor_worker = new Worker(`${base}/ifcsgv_extractor.worker.js`);
-
-                extractor_worker.postMessage({
-                    name: 'extract',
-                    workerData: {
-                        content: optimizerResult.content,
-                        config: config,
-                        entityMap: entityMap,
-                        relMap: optimizerResult.relMap,
-                        psetMap: optimizerResult.psetMap,
-                        key: nameMapping.get(entity),
-                    },
-                });
-
-                extractor_worker.onmessage = (e) => {
-                    //for visualising purposes
-                    if (e.data.name == 'extracting' && !working) {
-                        working = e.data.key;
-                    }
-
-                    //for visualising purposes
-                    if (e.data.name == 'extracting' && e.data.key == working) {
-                        progress_status = `Extracting ${e.data.key}`;
-                        progress_count = e.data.count;
-                        return;
-                    }
-
-                    //When extractor complete, push result to extractorResult, then terminate worker
-                    if (e.data.name == 'extracted') {
-                        n++;
-                        progress = (n / Object.entries(optimizerResult.entitiesMap).length) * 70 + 25;
-                        working = null;
-                        const result = { [e.data.key]: e.data.data, stats: e.data.stats };
-                        extractorResult.push(result);
-                        extractor_worker.terminate();
-
-                        if (tasks.length) {
-                            startWorker();
-                        } else {
-                            resolve('done');
-                        }
-                    }
-                };
-            }
-
-            startWorker();
-        });
-
-        promises.push(runTask);
-    }
-
-    //await for all worker to be completed
-    await Promise.all(promises);
-
-    //for visualising purpose
-    progress = 100;
-    progress_status = `Generating Results`;
-    progress_count = '';
-
-    //sort result alphabetically
-    //extractorResult contain infomations on number of
-    //elements checked and total number of elements found.
-    extractorResult.sort((a, b) => (Object.keys(a) > Object.keys(b) ? 1 : -1));
-
-    //convert array into object
-    //{"IfcBuildingElementProxy":[element,element,...], "IfcBuildingStorey":[element,...], ...}
-    const result = {};
-    extractorResult.forEach((item) => {
-        const key = Object.keys(item)[0];
-        const value = item[key];
-        result[key] = value;
-    });
-
-    return result;
 }
 
 function timeout(ms) {
@@ -272,6 +154,15 @@ function timeout(ms) {
             resolve();
         }, ms);
     });
+}
+
+function downloadJSON() {
+    const a = document.createElement('a');
+    const url = URL.createObjectURL(new Blob([JSON.stringify(ifcResult, null, 2)], { type: 'application/json' }));
+    a.download = fileName.split('.')[0] + '.json';
+    a.href = url;
+    a.click();
+    URL.revokeObjectURL(url);
 }
 
 //Aesthetic functions
@@ -304,57 +195,16 @@ function prettyJSON(obj) {
                 .replace(jsonLine, json.replacer);
         },
     };
-
-    return json.prettyPrint(obj);
+    const cutoff = 50;
+    const html = json.prettyPrint(obj);
+    const array = html.split(',');
+    let shortHtml = array.slice(0, cutoff).join(',');
+    if (array.length >= cutoff) {
+        shortHtml += `\n<span class="more">... ${array.length - cutoff} more lines</span>`;
+    }
+    return shortHtml;
 }
 </script>
-
-{#if showModal}
-    <Modal modalPosition="center" on:close={() => (showModal = false)}>
-        <div class="modal">
-            <h2>Configuration</h2>
-            <div class="grid">
-                <div class="config">
-                    <label for="sampleSize">Sample Size</label>
-                    <input
-                        name="sampleSize"
-                        on:input={(e) => {
-                            config.sampleSize = e.target.value;
-                            if (e.target.value == 1) {
-                                config.max = 0;
-                                config.min = 0;
-                            } else {
-                                config.max = 50;
-                                config.min = 12;
-                            }
-                        }}
-                        value="0.25" />
-                    <span>
-                        1 = Check all elements <br />
-                        0.5 = check 50% of elements in each category
-                    </span>
-                </div>
-
-                <div class="config">
-                    <label class="text-m" for="max">Maximum</label>
-                    <input id="max" disabled={config.sampleSize >= 1} bind:value={config.max} />
-                    <span
-                        >Maximum number of elements to be checked after factoring sample size. Set as 0 to check up to
-                        sample size.</span>
-                </div>
-
-                <div class="config">
-                    <label class="text-m" for="min">Minimum</label>
-                    <input id="min" disabled={config.sampleSize >= 1} bind:value={config.min} />
-                    <span>Minimum number of elements to be checked, ignoring sample size factor.</span>
-                </div>
-            </div>
-            <div class="buttons">
-                <button on:click={run}>Continue</button>
-            </div>
-        </div>
-    </Modal>
-{/if}
 
 <header>
     <a href="https://github.com/merhmerh/ifc-extractor">
@@ -363,11 +213,10 @@ function prettyJSON(obj) {
 </header>
 
 <div class="hero">
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <div class="title" on:click={animate}>
+    <button class="title" on:click={animate}>
         <img style="transform:rotateZ({spin}deg)" src="{base}/assets/ifcsgv-logo.svg" alt="logo" />
         <h1>IFC-Extractor</h1>
-    </div>
+    </button>
     <span>Multi-Threaded Web Worker for extracting properties and parameter from IFC Model.</span>
 </div>
 
@@ -392,25 +241,26 @@ function prettyJSON(obj) {
             <div class="process">
                 <h2>Processing...</h2>
 
-                <div class="progressbar mt-l">
-                    <div style="width:{progress}%" class="progress" />
-                </div>
-                <div class="progress_status">
-                    <span>{progress_status}</span>
-                    <span>{progress_count}</span>
-                </div>
+                <Icon icon="svg-spinners:blocks-shuffle-3" width="60" />
             </div>
         {/if}
     </div>
 </div>
-
 <div id="result" class="result">
-    <h2>📜 Result</h2>
+    <h2>
+        📜 Result
+        {#if ifcResult}
+            {fileName}
+            <button on:click={downloadJSON}>Download JSON</button>
+        {/if}
+    </h2>
     <div class="wrapper">
         {#if ifcResult}
             {#key ifcResult}
-                <pre transition:fly>{@html prettyJSON(ifcResult)}</pre>
+                <pre>{@html prettyJSON(ifcResult)}</pre>
             {/key}
+        {:else}
+            <pre>{@html prettyJSON(defaultResult)}</pre>
         {/if}
     </div>
 </div>
@@ -441,14 +291,15 @@ header {
 }
 
 .hero {
-    padding-block: 3rem;
+    padding-block: 0 3rem;
     display: grid;
     justify-content: center;
     @media screen and (max-width: $mobile) {
         padding-block: 0rem;
         margin-top: -1.5rem;
     }
-    .title {
+    button.title {
+        border: none;
         display: flex;
         justify-content: center;
         padding: 1rem;
@@ -473,6 +324,9 @@ header {
             @media screen and (max-width: $mobile) {
                 font-size: 2rem;
             }
+        }
+        &:hover {
+            background-color: transparent;
         }
     }
     span {
@@ -571,60 +425,19 @@ header {
             font-size: 2rem;
             margin-bottom: 1.5rem;
         }
-        .progress_status {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            font-family: 'Roboto Mono', monospace;
-            span:last-child {
-                color: #606b7a;
-                font-size: 0.875rem;
-            }
-        }
-        .progressbar {
-            width: 90%;
-            height: 40px;
-            margin-inline: auto;
-            border-radius: 1rem;
-            background-color: #191c1f;
-            position: relative;
-            overflow: hidden;
-
-            .progress {
-                height: inherit;
-                background-image: linear-gradient(
-                    -45deg,
-                    $accent 25%,
-                    transparent 25%,
-                    transparent 50%,
-                    $accent 50%,
-                    $accent 75%,
-                    transparent 75%,
-                    transparent
-                );
-                background-color: #2b72cf;
-                background-size: 40px 40px;
-                background-repeat: repeat;
-                width: 0%;
-                transition: ease 1s;
-                animation: slide 3s linear infinite;
-            }
-
-            @keyframes slide {
-                0% {
-                    background-position: 0 0;
-                }
-                100% {
-                    background-position: 40px 40px;
-                }
-            }
-        }
     }
 }
 
 .result {
     h2 {
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        button {
+            margin-left: auto;
+            font-size: 1rem;
+        }
     }
     .wrapper {
         border-radius: 1rem;
@@ -647,6 +460,16 @@ header {
             }
             .json-string {
                 color: #f1fa8c;
+            }
+            .more {
+                font-family: Roboto Mono, monospace;
+                margin-block: 8px;
+                background-color: #414244;
+                color: #8f969e;
+                padding: 4px 8px;
+                display: inline-flex;
+                align-items: center;
+                border-radius: 0.25rem;
             }
             @media screen and (max-width: $mobile) {
                 white-space: pre-wrap;
