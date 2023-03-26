@@ -3,19 +3,19 @@ self.onmessage = async (e) => {
 
     if (name == 'start') {
         self.postMessage({
-            message: "Starting Ifc Extractor",
+            message: "Starting Web Worker Process",
         })
 
         const result = await start(e)
         self.postMessage({
             complete: true,
-            message: "Ifc Extraction Completed",
+            message: "Process Completed",
             result: result
         })
     }
 
     if (name == 'optimize') {
-        const result = optimize(e.data.ifc, e.data.entities)
+        const result = optimize(e.data.ifc, e.data.entities, e.data.id)
         self.postMessage({
             result: result
         })
@@ -42,29 +42,34 @@ async function start(e) {
     const linesPerWorker = Math.floor(lines / threads)
     let lowerBound = 0
     let upperBound = linesPerWorker
+
     const promises = []
+
+
     for (let i = 0; i < threads; i++) {
 
         const runWorker = new Promise(resolve => {
+            const id = `GROUP-${i}`
             let workingIfc = ifcArray.slice(lowerBound, upperBound)
             if (i + 1 == threads) {
                 workingIfc = ifcArray.slice(lowerBound)
             }
             const worker = new Worker('ifcsg-extractor.worker.js')
+            // console.log(id, lowerBound, upperBound);
 
             worker.postMessage({
                 name: 'optimize',
+                id: id,
                 ifc: workingIfc,
                 entities: e.data.entities
             })
 
             worker.onmessage = (e) => {
-
                 worker.terminate()
                 resolve(e.data.result)
             }
 
-            lowerBound = upperBound
+            lowerBound = upperBound + 1
             upperBound = upperBound + linesPerWorker
         })
 
@@ -78,25 +83,29 @@ async function start(e) {
     const entityMap = new Map(rawResult.map(x => x.entityMap).map(map => [...map]).flat())
     const psetMap = new Map(rawResult.map(x => x.psetMap).map(map => [...map]).flat())
     const valueMap = new Map(rawResult.map(x => x.valueMap).map(map => [...map]).flat())
-
     const relArray = rawResult.map(x => x.relObj)
-    const relObj = {}
-    relArray.forEach(item => {
-        for (let i = 0; i < Object.entries(item).length; i++) {
-            const obj = Object.entries(item)[i]
-            if (relObj[obj[0]]) {
-                relObj[obj[0]] = [...relObj[obj[0]], ...obj[1]]
+
+    const relMap = new Map();
+
+    for (let i = 0; i < relArray.length; i++) {
+        const item = relArray[i];
+        const entries = Object.entries(item);
+
+        for (let j = 0; j < entries.length; j++) {
+            const [key, value] = entries[j];
+
+            if (relMap.has(key)) {
+                relMap.set(key, [...relMap.get(key), ...value]);
             } else {
-                relObj[obj[0]] = obj[1]
+                relMap.set(key, value);
             }
         }
-    })
-    const relMap = new Map(Object.entries(relObj))
+    }
 
 
     self.postMessage({
         name: `extraction`,
-        message: "Maps Extraction Completed",
+        message: "Data Extracted",
         data: entityMap.size
     })
 
@@ -121,7 +130,6 @@ async function start(e) {
             const splitEntityMap = new Map(array)
 
             const worker = new Worker('ifcsg-extractor.worker.js')
-
             worker.postMessage({
                 name: 'mapdata',
                 maps: {
@@ -153,131 +161,110 @@ async function start(e) {
     }
 
     const rawResult_IfcData = await Promise.all(mappingPromise)
+
+    self.postMessage({
+        name: `extraction`,
+        message: "Data Mapped",
+        data: entityMap.size
+    })
+
     const result = {}
     const resultArray = rawResult_IfcData.flat()
     for (const item of resultArray) {
-
         if (!result[item.Entity]) {
             result[item.Entity] = [item]
         } else {
             result[item.Entity].push(item)
         }
     }
+
+
     return result
 }
 
 function optimize(ifc, entities) {
     const entitiesRegex = entities.toString().toUpperCase().replace(/,/g, '|')
 
-    const regex_array = [
-        'IFCRELFILLSELEMENT',
-        'IFCRELVOIDSELEMENT',
-        'IFCREPRESENTATIONMAP',
-        'IFCTRIANGULATEDFACESET',
-        'IFCCURVEBOUNDEDPLANE',
-        'IFCINDEXEDPOLYGONALFACE',
-        'IFCPRESENTATIONLAYERASSIGNMENT',
-        'IFCCARTESIANPOINT',
-        'IFCCOLOURRGBLIST',
-        'IFCPOLYGONALFACESET',
-        'IFCAXIS2PLACEMENT3D',
-        'IFCARBITRARY',
-        'IFCSTYLEDITEM',
-        'IFCEXTRUDED',
-        'IFCINDEXED',
-        'IFCMATERIAL',
-        'IFCLOCALPLACEMENT',
-        'IFCSHAPE',
-        'IFCDIRECTION',
-        'IFCPRODUCTDEFINITIONSHAPE',
-        'IFCQUANTITY',
-        'IFCSIUNIT',
-        'IFCDERIVEDUNIT',
-        'IFCCONNECTIONSURFACEGEOMETRY',
-        'IFCGEOMETRICREPRESENTATIONSUBCONTEXT',
-        'IFCSURFACEOFLINEAREXTRUSION',
-        'IFCPLANE',
-        'IFCPOLYLINE',
-        'IFCRELASSOCIATESMATERIAL',
-        'IFCRELSPACEBOUNDARY',
-        'IFCCOLOURRGB',
-    ]
-    const regexString = regex_array.toString().replace(/,/g, '|')
+    const regexString = entitiesRegex + `|IFCRELDEFINESBYPROPERTIES|IFCPROPERTYSET|IFCPROPERTYSINGLEVALUE`
 
     const entityMap = new Map()
     const psetMap = new Map()
     const relObj = {}
     const valueMap = new Map()
 
-    ifc.forEach(line => {
+    for (let i = 0; i < ifc.length; i++) {
+        const line = ifc[i]
         const regex = new RegExp(regexString)
         if (!line.match(regex)) {
-
-            const regEnt = `(.*)=[\\s]?(${entitiesRegex})\\([^;].(.*?)'[^;]*\\$,'(.*?)'[^;]*,'(.*)'`
-            const match = line.match(regEnt) || []
-            if (match.length) {
-                entityMap.set(match[1], {
-                    Entity: match[2],
-                    Guid: match[3],
-                    ObjectType: match[4],
-                    ElementId: match[5]
-                })
-            }
-
-            const regRel = `IFCRELDEFINESBYPROPERTIES[^;]*\\((.*)\\),(.*)\\)`
-            const matchRel = line.match(regRel) || []
-            if (matchRel.length) {
-                if (relObj[matchRel[1]]) {
-                    relObj[matchRel[1]].push(matchRel[2])
-                } else {
-                    relObj[matchRel[1]] = [matchRel[2]]
-                }
-            }
-
-            const regPset = `(.*)\=[\\s]?IFCPROPERTYSET[^;]*?,'(.*?)'[^;]*\\((.*?)\\)`
-            const matchPset = line.match(regPset) || []
-            if (matchPset.length) {
-                psetMap.set(matchPset[1], {
-                    pset: matchPset[2],
-                    array: matchPset[3].split(',')
-                })
-            }
-
-            const regValue = `(.*)\=[\\s]?IFCPROPERTYSINGLEVALUE\\('(.*?)'[^;]\\$,(.*?)\\((.*)\\),`
-            const matchValue = line.match(regValue) || []
-            if (matchValue.length) {
-                const index = matchValue[1]
-                const property = matchValue[2]
-                const dataType = matchValue[3]
-                const rawValue = matchValue[4]
-                let value;
-
-                const numberDataTypes = ['IFCLENGTHMEASURE', 'IFCCOUNTMEASURE', 'IFCPOSITIVELENGTHMEASURE']
-                const stringDataTypes = ['IFCIDENTIFIER', 'IFCLABEL']
-
-
-                if (dataType == 'IFCBOOLEAN') {
-                    value = rawValue == '.T.' ? true : false;
-                } else if (dataType == 'IFCLOGICAL') {
-                    if (rawValue == '.U.') {
-                        value = 'UNKNOWN'
-                    } else {
-                        value = rawValue == '.T.' ? true : false;
-                    }
-                } else if (numberDataTypes.includes(dataType)) {
-                    value = parseFloat(rawValue)
-                } else if (stringDataTypes.includes(dataType)) {
-                    value = rawValue.slice(1, -1)
-                }
-                valueMap.set(index, {
-                    property: property,
-                    value: value
-                })
-
-            }
-
+            continue;
         }
-    });
+
+        const regEnt = `(.*)=[\\s]?(${entitiesRegex})\\([^;].(.*?)'[^;]*\\$,'(.*?)'[^;]*,'(.*)'`
+        const match = line.match(regEnt) || []
+        if (match.length) {
+            entityMap.set(match[1], {
+                Entity: match[2],
+                Guid: match[3],
+                ObjectType: match[4],
+                ElementId: match[5]
+            })
+            continue;
+        }
+
+        const regRel = `IFCRELDEFINESBYPROPERTIES[^;]*\\((.*)\\),(.*)\\)`
+        const matchRel = line.match(regRel) || []
+        if (matchRel.length) {
+            if (relObj[matchRel[1]]) {
+                relObj[matchRel[1]].push(matchRel[2])
+            } else {
+                relObj[matchRel[1]] = [matchRel[2]]
+            }
+            continue;
+        }
+
+        const regPset = `(.*)\=[\\s]?IFCPROPERTYSET[^;]*?,'(.*?)'[^;]*\\((.*?)\\)`
+        const matchPset = line.match(regPset) || []
+        if (matchPset.length) {
+            psetMap.set(matchPset[1], {
+                pset: matchPset[2],
+                array: matchPset[3].split(',')
+            })
+            continue;
+        }
+
+        const regValue = `(.*)\=[\\s]?IFCPROPERTYSINGLEVALUE\\('(.*?)'[^;]\\$,(.*?)\\((.*)\\),`
+        const matchValue = line.match(regValue) || []
+        if (matchValue.length) {
+            const index = matchValue[1]
+            const property = matchValue[2]
+            const dataType = matchValue[3]
+            const rawValue = matchValue[4]
+            let value;
+
+            const numberDataTypes = ['IFCLENGTHMEASURE', 'IFCCOUNTMEASURE', 'IFCPOSITIVELENGTHMEASURE']
+            const stringDataTypes = ['IFCIDENTIFIER', 'IFCLABEL']
+
+
+            if (dataType == 'IFCBOOLEAN') {
+                value = rawValue == '.T.' ? true : false;
+            } else if (dataType == 'IFCLOGICAL') {
+                if (rawValue == '.U.') {
+                    value = 'UNKNOWN'
+                } else {
+                    value = rawValue == '.T.' ? true : false;
+                }
+            } else if (numberDataTypes.includes(dataType)) {
+                value = parseFloat(rawValue)
+            } else if (stringDataTypes.includes(dataType)) {
+                value = rawValue.slice(1, -1)
+            }
+            valueMap.set(index, {
+                property: property,
+                value: value
+            })
+            continue;
+        }
+    }
 
     return {
         entityMap: entityMap,
@@ -295,6 +282,7 @@ function mapdata(maps) {
 
         const pascalCaseEntity = maps.nameMapping.get(entity.Entity)
         const psets = maps.relMap.get(key)
+
         entity.Entity = pascalCaseEntity
         for (const item of psets) {
             const pset = maps.psetMap.get(item)
@@ -318,7 +306,7 @@ function mapdata(maps) {
             entity[psetName] = pset_data
         }
         ifc_data.push(entity)
-        self.postMessage({ name: `mapped`, element: pascalCaseEntity })
+        // self.postMessage({ name: `mapped`, element: pascalCaseEntity })
     }
     return ifc_data
 }

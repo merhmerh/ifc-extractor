@@ -3,7 +3,7 @@ import { onMount, tick } from 'svelte';
 import Icon from '@iconify/svelte';
 import { base } from '$app/paths';
 import defaultResult from './defaultResult.json';
-import mapping_data from './ifcsg_mapping.json';
+// import mapping_data from './ifcsg_mapping.json';
 
 let spin = 0;
 let ifcInput,
@@ -15,27 +15,9 @@ let ifcInput,
 
 onMount(() => {
     animate();
-    const json = {
-        Note: 'This is a demo result, upload IFC model to see your result!',
-        IfcStairFlight: {
-            Entity: 'IfcStairFlight',
-            Guid: 'abVtP6Iv9t92EzKfdH28O',
-            ObjectType: 'Monolithic Run:Monolithic Run_PC',
-            ElementId: '4409048',
-            Pset_EnvironmentalImpactIndicators: {
-                Reference: 'Monolithic Run_PC',
-            },
-            Pset_StairFlightCommon: {
-                NosingLength: 0,
-                Reference: 'Monolithic Run_PC',
-                NumberOfRiser: 8,
-                NumberOfTreads: 8,
-                RiserHeight: 174.999999999999,
-                TreadLength: 275,
-            },
-        },
-    };
+
     threads = window.navigator.hardwareConcurrency;
+    console.log(threads);
 });
 
 //Core Functions
@@ -43,9 +25,7 @@ onMount(() => {
 //on file upload
 function ifcUploaded(e) {
     file = e.target.files[0];
-    console.log(file);
     fileName = file.name;
-    console.log(fileName);
     run();
 }
 
@@ -122,10 +102,6 @@ async function run() {
         worker.onmessage = (e) => {
             if (e.data.message) {
                 console.log(e.data.message);
-            }
-
-            if (e.data.name == 'extraction') {
-                console.log('extraction complete');
             }
 
             if (e.data.complete) {
