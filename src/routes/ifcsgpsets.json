@@ -1,0 +1,532 @@
+{
+    "IfcAlarm": {},
+    "IfcAudioVisualAppliance": {},
+    "IfcBeam": {
+        "SGPset_BeamReinforcement": {
+            "BeamCage": "Boolean",
+            "BottomLeft": "Label",
+            "BottomMiddle": "Label",
+            "BottomRight": "Label",
+            "StirrupsLeft": "Label",
+            "SideBar": "Label",
+            "StirrupsMiddle": "Label",
+            "StirrupsRight": "Label",
+            "TopLeft": "Label",
+            "TopMiddle": "Label",
+            "TopRight": "Label",
+            "StirrupsTypeLeft": "Label",
+            "StirrupsTypeMiddle": "Label",
+            "StirrupsTypeRight": "Label"
+        },
+        "SGPset_Beam": {
+            "BeamSpanType": "Label",
+            "ConstructionMethod": "Label",
+            "ReferTo2DDetail": "Label",
+            "ReinforcementSteelGrade": "Label",
+            "SectionFabricationMethod": "Label"
+        },
+        "SGPset_BeamDimension": {
+            "Depth": "Length",
+            "Mark": "Label",
+            "MemberSection": "Label",
+            "Width": "Length"
+        },
+        "SGPset_SteelConnection": {
+            "LeftConnectionDetail": "Label",
+            "LeftConnectionType": "Label",
+            "RightConnectionDetail": "Label",
+            "RightConnectionType": "Label"
+        },
+        "SGPset_Material": {
+            "MaterialGrade": "Label"
+        }
+    },
+    "IfcBuilding": {
+        "SGPset_Building": {
+            "ProjectDevelopmentType": "Label",
+            "NumberOfWorkers": "Integer"
+        }
+    },
+    "IfcBuildingElementProxy": {
+        "SGPset_BuildingElementProxy": {
+            "BarrierFreeAccessibility": "Boolean",
+            "FamilyParkingLot": "Boolean",
+            "LotNumber": "Label",
+            "FireExtinguisherRating": "Label"
+        },
+        "SGPset_BuildingElementProxyDimension": {
+            "Width": "Length",
+            "Depth": "Length",
+            "Mark": "Label",
+            "SHDLevel_SPT_MoreThan_100N": "Real",
+            "SHDLevel_SPT_MoreThan_60N": "Real",
+            "TerminationLevel": "Real",
+            "TopLevel": "Real",
+            "Length": "Length"
+        }
+    },
+    "IfcBuildingStorey": {
+        "SGPset_BuildingStorey": {
+            "RoofLevel": "Boolean"
+        }
+    },
+    "IfcBuildingSystem": {
+        "SGPset_BuildingSystem": {
+            "ConstructionMethod": "Label"
+        }
+    },
+    "IfcChiller": {},
+    "IfcCivilElement": {
+        "SGPset_CivilElement": {
+            "LoadBearing": "Boolean"
+        },
+        "SGPset_CivilElementDimension": {
+            "Height": "Length",
+            "Length": "Length",
+            "Thickness": "Length",
+            "Width": "Length"
+        }
+    },
+    "IfcColumn": {
+        "SGPset_ColumnDimension": {
+            "Breadth": "Length",
+            "Diameter": "Length",
+            "EndStorey": "Label",
+            "Mark": "Label",
+            "MemberSection": "Label",
+            "StartingStorey": "Label",
+            "Width": "Length"
+        },
+        "SGPset_SteelConnection": {
+            "ConnectionDetailsBottom": "Label",
+            "ConnectionDetailsTop": "Label",
+            "ConnectionTypeBottom": "Label",
+            "ConnectionTypeTop": "Label",
+            "SpliceDetail": "Label"
+        },
+        "SGPset_Column": {
+            "ConstructionMethod": "Label",
+            "ReferTo2DDetail": "Label",
+            "ReinforcementSteelGrade": "Label",
+            "SectionFabricationMethod": "Label"
+        },
+        "SGPset_Material": {
+            "MaterialGrade": "Label"
+        },
+        "SGPset_ColumnReinforcement": {
+            "Stirrups": "Label",
+            "StirrupsType": "Label",
+            "MainRebar": "Label"
+        },
+        "SGPset_ColumnStructuralLoad": {
+            "WorkingLoad_DA1-1": "Integer",
+            "WorkingLoad_DA1-2": "Integer"
+        }
+    },
+    "IfcCommunicationsAppliance": {},
+    "IfcDamper": {
+        "SGPset_Damper": {
+            "FireRating": "Label"
+        }
+    },
+    "IfcDiscreteAccessory": {},
+    "IfcDistributionChamberElement": {
+        "SGPset_DistributionChamberElementDimension": {
+            "Depth": "Length",
+            "Diameter": "Length",
+            "InvertLevel": "Label",
+            "Length": "Length",
+            "TopLevel": "Label",
+            "Width": "Length"
+        }
+    },
+    "IfcDistributionSystem": {
+        "SGPset_PipeSegmentDimension": {
+            "Diameter": "Length",
+            "Gradient": "Label",
+            "Length": "Length"
+        },
+        "SGPset_Material": {
+            "Material": "Label"
+        }
+    },
+    "IfcDoor": {
+        "SGPset_DoorDimension": {
+            "Height": "Length",
+            "Width": "Length"
+        },
+        "Pset_DoorCommon": {
+            "FireRating": "Label"
+        }
+    },
+    "IfcElectricFlowStorageDevice": {},
+    "IfcElement": {},
+    "IfcFireSuppressionTerminal": {
+        "SGPset_FireSuppressionTerminal": {
+            "Hose_NominalDiameter": "Length",
+            "ID": "Label",
+            "Private": "Boolean",
+            "Public": "Boolean"
+        }
+    },
+    "IfcFlowMeter": {
+        "SGPset_FlowMeter": {
+            "Capacity": "Volume"
+        },
+        "SGPset_FlowMeterDimension": {
+            "Diameter": "Length",
+            "Length": "Length"
+        },
+        "Pset_FlowMeterOccurrence": {
+            "Purpose": "Label"
+        }
+    },
+    "IfcFooting": {
+        "SGPset_FootingDimension": {
+            "Breadth": "Length",
+            "Depth": "Length",
+            "Mark": "Label",
+            "Width": "Length"
+        },
+        "SGPset_Footing": {
+            "DA1-1_BearingCapacity": "Integer",
+            "DA1-2_BearingCapacity": "Integer",
+            "ReferTo2DDetail": "Label",
+            "ReinforcementSteelGrade": "Label",
+            "SoilVerificationTest": "Label"
+        },
+        "SGPset_Material": {
+            "MaterialGrade": "Label"
+        },
+        "SGPset_FootingReinforcement": {
+            "SideBar": "Label",
+            "Stirrups": "Label",
+            "StirrupsType": "Label",
+            "TopDistribution": "Label",
+            "BottomDistribution": "Label",
+            "BottomMain": "Label",
+            "TopMain": "Label"
+        },
+        "SGPset_FoundationStructuralLoad": {
+            "WorkingLoad": "Integer"
+        }
+    },
+    "IfcFurniture": {},
+    "IfcGeographicElement": {
+        "SGPset_GeographicElement": {
+            "ApprovedSoilMixture": "Boolean",
+            "ReasonForRemoval": "Label",
+            "Species": "Label",
+            "Status": "Label",
+            "TreeNumber": "Label"
+        },
+        "SGPset_GeographicElementDimension": {
+            "Area": "Area",
+            "Girth": "Length",
+            "TreeHeight": "Label"
+        }
+    },
+    "IfcInterceptor": {
+        "SGPset_Interceptor": {
+            "ComplyToPUBStandardDrawing": "Boolean",
+            "ReferToDrawingNumber": "Label"
+        },
+        "SGPset_InterceptorDimension": {
+            "InvertLevel": "Label",
+            "TopLevel": "Label"
+        }
+    },
+    "IfcLightFixture": {},
+    "IfcOutlet": {},
+    "IfcPile": {
+        "SGPset_Pile": {
+            "BoreholeRef": "Label",
+            "DA1-1_CompressionCapacity": "Integer",
+            "DA1-1_TensionCapacity": "Integer",
+            "DA1-2_CompressionCapacity": "Integer",
+            "DA1-2_TensionCapacity": "Integer",
+            "MinEmbedmentIntoBearingLayer_SPT_MoreThan_100N": "Real",
+            "MinEmbedmentIntoBearingLayer_SPT_MoreThan_60N": "Real",
+            "StructuralCompressionCapacity": "Integer",
+            "StructuralTensionCapacity": "Integer",
+            "ConstructionMethod": "Label",
+            "MinRockSocketingLength": "Real",
+            "ReinforcementSteelGrade": "Label"
+        },
+        "SGPset_PileDimension": {
+            "Breadth": "Length",
+            "Diameter": "Length",
+            "CutOffLevel_SHD": "Real",
+            "Length": "Length",
+            "Mark": "Label",
+            "MemberSection": "Label",
+            "ToeLevel_SHD": "Real",
+            "Width": "Length"
+        },
+        "SGPset_PileStructuralLoad": {
+            "DA1-1_CompressionDesignLoad": "Integer",
+            "DA1-1_TensionDesignLoad": "Integer",
+            "DA1-2_CompressionDesignLoad": "Integer",
+            "DA1-2_TensionDesignLoad": "Integer",
+            "NegativeSkinFriction": "Integer"
+        },
+        "SGPset_PileReinforcement": {
+            "MainRebar": "Label",
+            "PileType": "Label",
+            "ReinforcementLength": "Label",
+            "Stirrups": "Label"
+        },
+        "SGPset_Material": {
+            "MaterialGrade": "Label"
+        }
+    },
+    "IfcPipeSegment": {
+        "SGPset_PipeSegment": {
+            "BeddingType": "Label"
+        }
+    },
+    "IfcPump": {
+        "SGPset_Pump": {
+            "Capacity": "Volume",
+            "Duty": "Boolean",
+            "Standby": "Boolean"
+        }
+    },
+    "IfcRailing": {
+        "SGPset_RailingDimension": {
+            "Height": "Length"
+        },
+        "SGPset_RailingStructuralLoad": {
+            "LateralLoad": "Label"
+        },
+        "SGPset_Material": {}
+    },
+    "IfcRamp": {
+        "SGPset_RampDimension": {
+            "Gradient": "Label",
+            "Width": "Length"
+        },
+        "SGPset_Ramp": {
+            "BarrierFreeAccessibility": "Boolean",
+            "TransitionRamp": "Boolean",
+            "Accessway": "Boolean",
+            "Egress": "Boolean",
+            "Ingress": "Boolean"
+        }
+    },
+    "IfcRoof": {},
+    "IfcSanitaryTerminal": {
+        "SGPset_SanitaryTerminal": {
+            "ChildrenFriendly": "Boolean"
+        }
+    },
+    "IfcSensor": {
+        "SGPset_Sensor": {
+            "Declaration": "Label",
+            "SmokeDetectorType": "Label"
+        }
+    },
+    "IfcShadingDevice": {},
+    "IfcSite": {
+        "SGPset_Site": {
+            "ProjectDevelopmentType": "Label",
+            "NumberOfWorkers": "Integer"
+        },
+        "Pset_SiteCommon": {
+            "TotalArea": "Area"
+        }
+    },
+    "IfcSlab": {
+        "SGPset_SlabReinforcement": {
+            "WeldedMesh": "Boolean",
+            "BottomDistribution_nominal": "Label",
+            "BottomMain_nominal": "Label",
+            "TopDistribution_nominal": "Label",
+            "TopMain_nominal": "Label",
+            "Stirrups": "Label",
+            "StirrupsType": "Label"
+        },
+        "SGPset_Slab": {
+            "SlabType": "Label",
+            "ReinforcementSteelGrade": "Label",
+            "ConstructionMethod": "Label",
+            "ReferTo2DDetail": "Label",
+            "ShelterUsage": "Boolean"
+        },
+        "SGPset_SlabDimension": {
+            "Mark": "Label",
+            "Length": "Length",
+            "Thickness": "Length",
+            "Width": "Length"
+        },
+        "SGPset_Material": {
+            "MaterialGrade": "Label"
+        }
+    },
+    "IfcSpace": {
+        "SGPset_Space": {
+            "BarrierFreeAccessibility": "Boolean",
+            "Retrofit": "Boolean",
+            "SpaceName": "Label",
+            "NormalVentilationMode": "Label",
+            "LoadingCapacity": "Real",
+            "FireEmergencyVentilationMode": "Label",
+            "TwentyFourHourMannedStation": "Boolean"
+        },
+        "SGPset_SpaceDimension": {
+            "Area": "Area",
+            "Height": "Length",
+            "Volume": "Label"
+        },
+        "SGPset_SpaceThermalRequirements": {
+            "NormalVentilationMode": "Label"
+        },
+        "SGPset_SpaceOccupancyRequirements": {
+            "OccupantLoad": "Integer"
+        },
+        "SGPset_SpaceArea_Connectivity": {
+            "ACN_ActivityGeneratingUseType": "Label",
+            "ACN_CloseTime": "Label",
+            "ACN_ConnectivityType": "Label",
+            "ACN_IsOpen24HoursToPublic": "Boolean",
+            "ACN_IsPavingSpecified": "Boolean",
+            "ACN_OpenTime": "Label",
+            "ACN_PavingSpecification": "Label"
+        },
+        "SGPset_SpaceArea_GFA": {
+            "AGF_AreaID": "Label",
+            "AGF_BonusGFAType": "Label",
+            "AGF_DetailedUse": "Label",
+            "AGF_DevelopmentUse": "Label",
+            "AGF_FacilityType": "Label",
+            "AGF_Name": "Label",
+            "AGF_Note": "Label",
+            "AGF_PublicToiletID": "Label",
+            "AGF_RecyclablesChuteID": "Label",
+            "AGF_RefuseChuteID": "Label",
+            "AGF_UnitNumber": "Label",
+            "AGF_UseQuantum": "Label"
+        },
+        "SGPset_SpaceArea_Landscape": {
+            "ALS_GreeneryFeatures": "Label",
+            "ALS_LandscapeType": "Label"
+        },
+        "SGPset_SpaceArea_Strata": {
+            "AST_AreaType": "Label",
+            "AST_Associated to": "Label",
+            "AST_Extg_StrataLotNumber": "Label",
+            "AST_LegalArea": "Integer",
+            "AST_Prop_StrataLotNumber": "Label"
+        },
+        "SGPset_SpaceArea_Verification": {
+            "AVF_AreaType": "Label",
+            "AVF_BonusGFAType": "Label",
+            "AVF_DetailedUse": "Label",
+            "AVF_DevelopmentUse": "Label",
+            "AVF_Name": "Label",
+            "AVF_UseQuantum": "Label"
+        }
+    },
+    "IfcStair": {
+        "SGPset_StairReinforcement": {
+            "BottomDistribution": "Label",
+            "BottomMain": "Label",
+            "ConstructionMethod": "Label",
+            "TopDistribution": "Label",
+            "TopMain": "Label"
+        },
+        "SGPset_StairSteelConnection": {
+            "ConnectionDetailsBottom": "Label",
+            "ConnectionDetailsTop": "Label",
+            "ConnectionTypeBottom": "Label",
+            "ConnectionTypeTop": "Label"
+        },
+        "SGPset_Stair": {
+            "Mark": "Label",
+            "ReferTo2DDetail": "Label",
+            "ReinforcementSteelGrade": "Label",
+            "SectionFabricationMethod": "Label"
+        },
+        "SGPset_StairDimension": {
+            "MemberSection": "Label",
+            "Thickness": "Length",
+            "Width": "Length"
+        },
+        "Pset_StairCommon": {
+            "FireExit": "Boolean"
+        }
+    },
+    "IfcStairFlight": {
+        "SGPset_StairFlight": {
+            "ConstructionMethod": "Label"
+        },
+        "Pset_StairFlightCommon": {
+            "NumberOfRiser": "Integer",
+            "RiserHeight": "Length",
+            "TreadLength": "Length"
+        }
+    },
+    "IfcTank": {
+        "Pset_TankTypeCommon": {
+            "NominalCapacity": "Volume"
+        },
+        "SGPset_TankDimension": {
+            "Height": "Length",
+            "Length": "Length",
+            "Width": "Length",
+            "Diameter": "Length",
+            "Thickness": "Length"
+        },
+        "SGPset_Tank": {
+            "IsPotable": "Boolean"
+        }
+    },
+    "IfcTransportElement": {
+        "SGPset_TransportElement": {
+            "BarrierFreeAccessibility": "Boolean"
+        },
+        "SGPset_TransportElementTypeLiftDimension": {
+            "Length": "Length",
+            "Width": "Length"
+        }
+    },
+    "IfcUnitaryControlElement": {
+        "SGPset_UnitaryControlElement": {
+            "PWCS_Flushing": "Boolean"
+        }
+    },
+    "IfcUnitaryEquipment": {},
+    "IfcValve": {},
+    "IfcWall": {
+        "SGPset_WallReinforcement": {
+            "HorizontalRebar": "Label",
+            "VerticalRebar": "Label",
+            "Stirrups": "Label",
+            "StirrupsType": "Label"
+        },
+        "SGPset_Wall": {
+            "ConstructionMethod": "Label",
+            "ReferTo2DDetail": "Label",
+            "ReinforcementSteelGrade": "Label",
+            "ShelterUsage": "Boolean"
+        },
+        "SGPset_WallDimension": {
+            "Length": "Length",
+            "Mark": "Label",
+            "Thickness": "Length"
+        },
+        "SGPset_Material": {
+            "MaterialGrade": "Label"
+        },
+        "Pset_WallCommon": {
+            "FireRating": "Label"
+        }
+    },
+    "IfcWasteTerminal": {},
+    "IfcWindow": {
+        "SGPset_WindowDimension": {
+            "InnerDiameter": "Length",
+            "OuterDiameter": "Length"
+        }
+    }
+}

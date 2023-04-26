@@ -3,24 +3,14 @@ import { onMount, tick } from 'svelte';
 import Icon from '@iconify/svelte';
 import { base } from '$app/paths';
 import defaultResult from './defaultResult.json';
-// import mapping_data from './ifcsg_mapping.json';
+import ifcsgpset from './ifcsgpsets.json';
 
 let spin = 0;
-let ifcInput,
-    file,
-    processing,
-    ifcResult,
-    fileName,
-    threads = 6;
+let ifcInput, file, processing, ifcResult, fileName;
 
 onMount(() => {
     animate();
-
-    threads = window.navigator.hardwareConcurrency;
-    console.log(threads);
 });
-
-//Core Functions
 
 //on file upload
 function ifcUploaded(e) {
@@ -32,78 +22,23 @@ function ifcUploaded(e) {
 //start processing
 async function run() {
     processing = true;
-
+    console.log('start');
     const t0 = performance.now();
+    const worker = new Worker(`${base}/extractor.worker.js`);
 
-    //read uploaded IFC file as text
-    const ifc = await new Promise((resolve, reject) => {
-        const fileReader = new FileReader();
-        fileReader.readAsText(file);
-        fileReader.onload = () => {
-            resolve(fileReader.result);
-        };
-        fileReader.onerror = () => {
-            reject(fileReader.error);
-        };
-    });
+    //In this example,the mapping uses ifcsgpset.json
+    //which is an json object contain all IfcEntity and it's property from IFC-SG mapping Table
+    //{ifcEntity: {propertyset:{propertyname:datatype}}}
+    //the worker function only need a list of IFCENTITY, propertyset are ignore.
+    //You can update the worker file to take in an array of IfcEntity instead
 
-    //Worker require an array of all IFC entities to be extracted.
-    //ifcsg_mapping.json is an object with pset and pname data from IFC-SG Specification,
-
-    //To convert mapping to array using ifcsg_mapping.json:
-    //const mapping = Object.keys(mapping_data).map((x) => x.toUpperCase());
-
-    //Therefore, it can also be written like this:
-    const entities = [
-        'IfcBeam',
-        'IfcBuilding',
-        'IfcBuildingElementProxy',
-        'IfcBuildingStorey',
-        'IfcBuildingSystem',
-        'IfcCivilElement',
-        'IfcColumn',
-        'IfcDamper',
-        'IfcDistributionChamberElement',
-        'IfcDistributionSystem',
-        'IfcDoor',
-        'IfcFireSuppressionTerminal',
-        'IfcFlowMeter',
-        'IfcFooting',
-        'IfcGeographicElement',
-        'IfcInterceptor',
-        'IfcPile',
-        'IfcPipeSegment',
-        'IfcPump',
-        'IfcRailing',
-        'IfcRamp',
-        'IfcSanitaryTerminal',
-        'IfcSensor',
-        'IfcSite',
-        'IfcSlab',
-        'IfcSpace',
-        'IfcStair',
-        'IfcStairFlight',
-        'IfcTank',
-        'IfcTransportElement',
-        'IfcUnitaryControlElement',
-        'IfcWall',
-        'IfcWindow',
-    ];
-
-    const worker = new Worker(`${base}/ifcsg-extractor.worker.js`);
     const result = await new Promise((resolve) => {
         worker.postMessage({
             name: 'start',
-            ifc: ifc,
-            entities: entities,
-            threads: 16,
+            file: file,
+            mapping: ifcsgpset,
         });
-
         worker.onmessage = (e) => {
-            if (e.data.message) {
-                console.log(e.data.message);
-            }
-
             if (e.data.complete) {
                 worker.terminate();
                 resolve(e.data.result);
@@ -113,11 +48,10 @@ async function run() {
 
     const t1 = performance.now();
     console.log(`Completed In ${((t1 - t0) / 1000).toFixed(2)}s`);
-
     console.log(result);
+    await timeout(500); //artifically wait 500ms
     processing = false;
-    await timeout(500);
-    ifcResult = result;
+    ifcResult = result.data;
     await tick();
     document.querySelector('#result').scrollIntoView({
         behavior: 'smooth',
@@ -193,7 +127,7 @@ function prettyJSON(obj) {
         <img style="transform:rotateZ({spin}deg)" src="{base}/assets/ifcsgv-logo.svg" alt="logo" />
         <h1>IFC-Extractor</h1>
     </button>
-    <span>Multi-Threaded Web Worker for extracting properties and parameter from IFC Model.</span>
+    <span>Web Worker for extracting properties from IFC Model</span>
 </div>
 
 <div class="demo">

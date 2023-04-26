@@ -1,6 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 import svelte_proprocess from 'svelte-preprocess';
 const dev = process.argv.includes('dev');
+
 console.log(dev);
 const config = {
 	kit: {

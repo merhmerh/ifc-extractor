@@ -9,7 +9,16 @@ self.onmessage = async (e) => {
         const result = await start(e)
         self.postMessage({
             complete: true,
-            message: "Process Completed",
+            message: "Maps Extraction Completed",
+            result: result
+        })
+    }
+
+    if (name == 'mapMain') {
+        const result = await mapMain(e)
+        self.postMessage({
+            complete: true,
+            message: "Map Data Completed",
             result: result
         })
     }
@@ -31,13 +40,54 @@ self.onmessage = async (e) => {
 
 }
 
+async function readFile(fileData) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+
+        // define the file to read
+        const fileToRead = fileData;
+        let lines = [];
+
+        // read the file in chunks
+        function readChunk(offset, chunkSize) {
+            const file = fileToRead.slice(offset, offset + chunkSize);
+
+            reader.onload = function () {
+                const partialLines = reader.result.split('\n');
+
+                partialLines.pop(); //remove last item from array
+
+                // add the partial lines to the array
+                lines = [...lines, ...partialLines];
+
+                // read the next chunk if there is one
+                if (offset + chunkSize < fileToRead.size) {
+                    readChunk(offset + chunkSize - 1, chunkSize);
+                } else {
+                    resolve(lines);
+                }
+            };
+
+            reader.onerror = function (error) {
+                console.log(error);
+            };
+
+            reader.readAsText(file);
+        }
+
+        // start reading the file
+        readChunk(0, 1024 * 1024 * 50); // read in 1MB chunks
+    });
+}
+
 async function start(e) {
     const threads = e.data.threads
 
     //split ifc into threads section
-    const ifc = e.data.ifc
+    // const ifcArray = e.data.ifc
+    const ifcArray = await readFile(e.data.ifc)
 
-    const ifcArray = ifc.split('\n')
+    // const ifcArray = ifc.split('\n')
     const lines = ifcArray.length
     const linesPerWorker = Math.floor(lines / threads)
     let lowerBound = 0
@@ -86,7 +136,6 @@ async function start(e) {
     const relArray = rawResult.map(x => x.relObj)
 
     const relMap = new Map();
-
     for (let i = 0; i < relArray.length; i++) {
         const item = relArray[i];
         const entries = Object.entries(item);
@@ -102,84 +151,22 @@ async function start(e) {
         }
     }
 
-
-    self.postMessage({
-        name: `extraction`,
-        message: "Data Extracted",
-        data: entityMap.size
-    })
-
-    //split entities into threads
-    const mappingPromise = []
-    const entitesPerWorker = parseInt(entityMap.size / threads)
-    lowerBound = 0
-    upperBound = entitesPerWorker
-
     const nameMapping = new Map()
     e.data.entities.forEach((entitiy) => {
         nameMapping.set(entitiy.toUpperCase(), entitiy);
     });
 
-    for (let i = 0; i < threads; i++) {
-        const runWorker = new Promise(resolve => {
-            //split entites map in number threads
-            let array = Array.from(entityMap).slice(lowerBound, upperBound)
-            if (i + 1 == threads) {
-                array = Array.from(entityMap).slice(lowerBound)
-            }
-            const splitEntityMap = new Map(array)
-
-            const worker = new Worker('ifcsg-extractor.worker.js')
-            worker.postMessage({
-                name: 'mapdata',
-                maps: {
-                    entityMap: splitEntityMap,
-                    relMap,
-                    psetMap,
-                    valueMap,
-                    nameMapping
-                },
-            })
-
-            worker.onmessage = (e) => {
-
-                self.postMessage({
-                    name: e.data.name,
-                    element: e.data.element
-                })
-                if (e.data.completed) {
-                    resolve(e.data.result)
-                    worker.terminate()
-                }
-            }
-
-            lowerBound = upperBound
-            upperBound = upperBound + entitesPerWorker
-        })
-
-        mappingPromise.push(runWorker)
-    }
-
-    const rawResult_IfcData = await Promise.all(mappingPromise)
-
     self.postMessage({
         name: `extraction`,
-        message: "Data Mapped",
-        data: entityMap.size
+        message: "Data Extracted",
+        data: entityMap.size,
     })
 
-    const result = {}
-    const resultArray = rawResult_IfcData.flat()
-    for (const item of resultArray) {
-        if (!result[item.Entity]) {
-            result[item.Entity] = [item]
-        } else {
-            result[item.Entity].push(item)
-        }
+    const maps = {
+        entityMap, psetMap, valueMap, relMap, nameMapping
     }
 
-
-    return result
+    return (maps)
 }
 
 function optimize(ifc, entities) {
@@ -199,14 +186,15 @@ function optimize(ifc, entities) {
             continue;
         }
 
-        const regEnt = `(.*)=[\\s]?(${entitiesRegex})\\([^;].(.*?)'[^;]*\\$,'(.*?)'[^;]*,'(.*)'`
+        const regEnt = `(.*)=[\\s]?(${entitiesRegex})\\([^;](.*?)'[^;]+?'(.+?)',(?:.+?),(?:.+?),(?:.+?),(?:.+?),(.+?),(.+?)[\)|,]`
         const match = line.match(regEnt) || []
         if (match.length) {
             entityMap.set(match[1], {
                 Entity: match[2],
                 Guid: match[3],
                 ObjectType: match[4],
-                ElementId: match[5]
+                ElementId: match[5],
+                PredefinedType: match[6]
             })
             continue;
         }
@@ -284,6 +272,9 @@ function mapdata(maps) {
         const psets = maps.relMap.get(key)
 
         entity.Entity = pascalCaseEntity
+        if (!psets) {
+            continue;
+        }
         for (const item of psets) {
             const pset = maps.psetMap.get(item)
             if (!pset) {
@@ -310,3 +301,4 @@ function mapdata(maps) {
     }
     return ifc_data
 }
+

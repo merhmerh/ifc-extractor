@@ -1,6 +1,6 @@
 ![Logo](static/assets/logo_full.svg)
 
-Multi-Threaded Web Worker for extracting properties and parameter from IFC Model.
+Web Worker for extracting properties from IFC Model.
 
 [Sandbox Demo Page](https://merhmerh.github.io/ifc-extractor/)
 
@@ -8,8 +8,8 @@ Multi-Threaded Web Worker for extracting properties and parameter from IFC Model
 
 -   🌐 Written in vanilla Javascript
 -   🛒 Zero Dependencies
--   💻 Run Locally on the browser
--   🌿 Multi-Threaded
+-   💻 Run Locally in the browser
+-   🐋 Capable of handling large file
 
 ## Concept
 
@@ -21,32 +21,28 @@ The IFC Extractor is used in the [IFC-SG Validator](https://code.builtsearch.com
 
 ## Process Overview
 
-The IFC Extractor uses a recursive web worker that automatically processes your IFC model. The two main processes are:
+The IFC Extractor uses a web worker that processes your IFC model. It extracts data from an Industry Foundation Classes (IFC) file. The function takes in two parameters, a file and a mapping.
 
-1. Optimizer
-2. Extractor
+### Parameters
 
-The optimizer takes in the raw IFC file as text, filters unnecessary lines (such as geometry and spatial relationships), and returns three sets of key-value pairs:
+-   `file`: The IFC file that is to be parsed.
+-   `mapping`: An object that contains list of IfcEntity.
 
-1. Entities Map
-2. Relationship Map
-3. PropertySet Map
+Data are extracted from the IFC File, specifically from the `ENTITY`, `PROPERTYSET`, and `VALUE` sections of the file. It then stores this data in maps, which are used to organize the extracted data.
 
-Once the optimizer has completed its job, multiple instances of the extractor can be triggered. Each instance will use a single processing thread.
-
-Each extractor works on a single entity found in the Entities Map and maps each element's parameters and properties with data from the Relationship and PropertySet Map.
+It then loops through the entities in the ENTITY map and appends relevant property sets and property values to each entity. The extracted data is then mapped to each entity, and the result is returned as an object.
 
 Promises are used to wait for all results.
 
 ## Processing Time
 
-The IFC Extractor has been optimized for efficient processing of IFC models, allowing for quick processing times. On a modern CPU, it can process files that are less than 50 MB in less than 5 seconds.
+IFC Extractor is optimized for efficient processing of IFC models and uses a technique that splits the file into chunks, allowing for processing of very large files without loading the entire file into memory.
 
-However, the processing time increases exponentially with the size of the IFC Model.
+The processing time is relatively fast, at near-native performance.
 
 ## Demo
 
-This demo is built with Svelte and SvelteKit.
+This demo is built with `Svelte` and `SvelteKit`.
 
 ### Install dependencies
 
