@@ -15,13 +15,13 @@
 
     <meta http-equiv="content-security-policy" content="">
 		<link href="/ifc-extractor/_app/immutable/assets/_page.95de5391.css" rel="stylesheet">
-		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/start.785b7d4f.js">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/start.7fde76ab.js">
 		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/chunks/index.84a2c5aa.js">
-		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/chunks/singletons.7221007c.js">
-		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/chunks/paths.df73d602.js">
-		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/app.334f6ede.js">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/chunks/singletons.9b72947d.js">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/chunks/paths.62c822cd.js">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/app.93c422af.js">
 		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/layout.svelte.edb66e5b.js">
-		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/_page.svelte.fd6aa1f3.js">
+		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/_page.svelte.5edd35df.js">
 		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/entry/_page.js.9c5eea7e.js">
 		<link rel="modulepreload" href="/ifc-extractor/_app/immutable/chunks/_page.da46b06b.js">
   </head>
@@ -33,7 +33,7 @@
 
 <div class="hero"><button class="title"><img style="transform:rotateZ(0deg)" src="/ifc-extractor/assets/ifcsgv-logo.svg" alt="logo">
         <h1>IFC-Extractor</h1></button>
-    <span>Multi-Threaded Web Worker for extracting properties and parameter from IFC Model.</span></div>
+    <span>Web Worker for extracting properties from IFC Model</span></div>
 
 <div class="demo"><h2>🧪 Demo</h2>
 
@@ -44,23 +44,31 @@
         </h2>
     <div class="wrapper"><pre><!-- HTML_TAG_START -->{
   <span class=json-key>Note</span>: <span class=json-string>"This is a demo result, upload IFC model to see your result!"</span>,
-  <span class=json-key>IfcStairFlight</span>: {
-    <span class=json-key>Entity</span>: <span class=json-string>"IfcStairFlight"</span>,
-    <span class=json-key>Guid</span>: <span class=json-string>"abVtP6Iv9t92EzKfdH28O"</span>,
-    <span class=json-key>ObjectType</span>: <span class=json-string>"Monolithic Run:Monolithic Run_PC"</span>,
-    <span class=json-key>ElementId</span>: <span class=json-string>"4409048"</span>,
-    <span class=json-key>Pset_EnvironmentalImpactIndicators</span>: {
-      <span class=json-key>Reference</span>: <span class=json-string>"Monolithic Run_PC"</span>
-    },
-    <span class=json-key>Pset_StairFlightCommon</span>: {
-      <span class=json-key>NosingLength</span>: <span class=json-value>0</span>,
-      <span class=json-key>Reference</span>: <span class=json-string>"Monolithic Run_PC"</span>,
-      <span class=json-key>NumberOfRiser</span>: <span class=json-value>8</span>,
-      <span class=json-key>NumberOfTreads</span>: <span class=json-value>8</span>,
-      <span class=json-key>RiserHeight</span>: <span class=json-value>174.999999999999</span>,
-      <span class=json-key>TreadLength</span>: <span class=json-value>275</span>
+  <span class=json-key>IfcStairFlight</span>: [
+    {
+      <span class=json-key>Entity</span>: <span class=json-string>"IfcStairFlight"</span>,
+      <span class=json-key>Guid</span>: <span class=json-string>"3abVtP6Iv9t92EzKfdH28O"</span>,
+      <span class=json-key>Name</span>: <span class=json-string>"Precast Stair:Stair:4408930 Run 1"</span>,
+      <span class=json-key>Description</span>: <span class=json-value>null</span>,
+      <span class=json-key>ObjectType</span>: <span class=json-string>"Monolithic Run:Monolithic Run_PC"</span>,
+      <span class=json-key>Tag</span>: <span class=json-string>"4409048"</span>,
+      <span class=json-key>PredefinedType</span>: <span class=json-string>"$"</span>,
+      <span class=json-key>Pset_EnvironmentalImpactIndicators</span>: {
+        <span class=json-key>Reference</span>: <span class=json-string>"Monolithic Run_PC"</span>
+      },
+      <span class=json-key>Pset_StairFlightCommon</span>: {
+        <span class=json-key>NosingLength</span>: <span class=json-value>0</span>,
+        <span class=json-key>Reference</span>: <span class=json-string>"Monolithic Run_PC"</span>,
+        <span class=json-key>NumberOfRiser</span>: <span class=json-value>8</span>,
+        <span class=json-key>NumberOfTreads</span>: <span class=json-value>8</span>,
+        <span class=json-key>RiserHeight</span>: <span class=json-value>174.999999999999</span>,
+        <span class=json-key>TreadLength</span>: <span class=json-value>275</span>,
+        <span class=json-key>WalkingLineOffset</span>: <span class=json-value>1.80445966287349</span>,
+        <span class=json-key>TreadLengthAtOffset</span>: <span class=json-value>275</span>,
+        <span class=json-key>TreadLengthAtInnerSide</span>: <span class=json-value>275</span>
+      }
     }
-  }
+  ]
 }<!-- HTML_TAG_END --></pre></div></div>
 
 <footer><span>IFC-Extractor, 2023</span>
@@ -74,7 +82,7 @@
 			
 			<script>
 				{
-					__sveltekit_1tnpg9f = {
+					__sveltekit_1ft0brx = {
 						env: {},
 						assets: "/ifc-extractor",
 						base: "/ifc-extractor",
@@ -84,10 +92,10 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("/ifc-extractor/_app/immutable/entry/start.785b7d4f.js"),
-						import("/ifc-extractor/_app/immutable/entry/app.334f6ede.js")
+						import("/ifc-extractor/_app/immutable/entry/start.7fde76ab.js"),
+						import("/ifc-extractor/_app/immutable/entry/app.93c422af.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_1tnpg9f.element, {
+						kit.start(app, __sveltekit_1ft0brx.element, {
 							node_ids: [0, 2],
 							data,
 							form: null,
