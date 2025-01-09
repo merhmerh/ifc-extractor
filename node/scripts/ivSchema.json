@@ -1,0 +1,2618 @@
+[
+  {
+    "name": "IfcActuator",
+    "enumeration": [
+      "ELECTRICACTUATOR",
+      "HANDOPERATEDACTUATOR",
+      "HYDRAULICACTUATOR",
+      "PNEUMATICACTUATOR",
+      "THERMOSTATICACTUATOR",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcAirTerminal",
+    "enumeration": [
+      "DIFFUSER",
+      "GRILLE",
+      "LOUVRE",
+      "REGISTER",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcAirTerminalBox",
+    "enumeration": [
+      "CONSTANTFLOW",
+      "VARIABLEFLOWPRESSUREDEPENDANT",
+      "VARIABLEFLOWPRESSUREINDEPENDANT",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcAirToAirHeatRecovery",
+    "enumeration": [
+      "FIXEDPLATECOUNTERFLOWEXCHANGER",
+      "FIXEDPLATECROSSFLOWEXCHANGER",
+      "FIXEDPLATEPARALLELFLOWEXCHANGER",
+      "ROTARYWHEEL",
+      "RUNAROUNDCOILLOOP",
+      "HEATPIPE",
+      "TWINTOWERENTHALPYRECOVERYLOOPS",
+      "THERMOSIPHONSEALEDTUBEHEATEXCHANGERS",
+      "THERMOSIPHONCOILTYPEHEATEXCHANGERS",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcAlarm",
+    "enumeration": [
+      "BELL",
+      "BREAKGLASSBUTTON",
+      "LIGHT",
+      "MANUALPULLBOX",
+      "SIREN",
+      "WHISTLE",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcAudioVisualAppliance",
+    "enumeration": [
+      "AMPLIFIER",
+      "CAMERA",
+      "DISPLAY",
+      "MICROPHONE",
+      "PLAYER",
+      "PROJECTOR",
+      "RECEIVER",
+      "SPEAKER",
+      "SWITCHER",
+      "TELEPHONE",
+      "TUNER",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcBeam",
+    "enumeration": [
+      "BEAM",
+      "JOIST",
+      "HOLLOWCORE",
+      "LINTEL",
+      "SPANDREL",
+      "T_BEAM",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcBoiler",
+    "enumeration": [
+      "WATER",
+      "STEAM",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcBuilding",
+    "attributes": [
+      "CompositionType",
+      "LongName",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ElevationOfRefHeight",
+      "ElevationOfTerrain"
+    ]
+  },
+  {
+    "name": "IfcBuildingElementPart",
+    "enumeration": [
+      "INSULATION",
+      "PRECASTPANEL",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcBuildingElementProxy",
+    "enumeration": [
+      "COMPLEX",
+      "ELEMENT",
+      "PARTIAL",
+      "PROVISIONFORVOID",
+      "PROVISIONFORSPACE",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcBuildingStorey",
+    "attributes": [
+      "CompositionType",
+      "LongName",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "Elevation"
+    ]
+  },
+  {
+    "name": "IfcBuildingSystem",
+    "enumeration": [
+      "FENESTRATION",
+      "FOUNDATION",
+      "LOADBEARING",
+      "OUTERSHELL",
+      "SHADING",
+      "TRANSPORT",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType",
+      "LongName"
+    ]
+  },
+  {
+    "name": "IfcBurner",
+    "enumeration": [
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCableCarrierFitting",
+    "enumeration": [
+      "BEND",
+      "CROSS",
+      "REDUCER",
+      "TEE",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCableCarrierSegment",
+    "enumeration": [
+      "CABLELADDERSEGMENT",
+      "CABLETRAYSEGMENT",
+      "CABLETRUNKINGSEGMENT",
+      "CONDUITSEGMENT",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCableFitting",
+    "enumeration": [
+      "CONNECTOR",
+      "ENTRY",
+      "EXIT",
+      "JUNCTION",
+      "TRANSITION",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCableSegment",
+    "enumeration": [
+      "BUSBARSEGMENT",
+      "CABLESEGMENT",
+      "CONDUCTORSEGMENT",
+      "CORESEGMENT",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcChiller",
+    "enumeration": [
+      "AIRCOOLED",
+      "WATERCOOLED",
+      "HEATRECOVERY",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcChimney",
+    "enumeration": [
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCoil",
+    "enumeration": [
+      "DXCOOLINGCOIL",
+      "ELECTRICHEATINGCOIL",
+      "GASHEATINGCOIL",
+      "HYDRONICCOIL",
+      "STEAMHEATINGCOIL",
+      "WATERCOOLINGCOIL",
+      "WATERHEATINGCOIL",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcColumn",
+    "enumeration": [
+      "COLUMN",
+      "PILASTER",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCommunicationsAppliance",
+    "enumeration": [
+      "ANTENNA",
+      "COMPUTER",
+      "FAX",
+      "GATEWAY",
+      "MODEM",
+      "NETWORKAPPLIANCE",
+      "NETWORKBRIDGE",
+      "NETWORKHUB",
+      "PRINTER",
+      "REPEATER",
+      "ROUTER",
+      "SCANNER",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCompressor",
+    "enumeration": [
+      "DYNAMIC",
+      "RECIPROCATING",
+      "ROTARY",
+      "SCROLL",
+      "TROCHOIDAL",
+      "SINGLESTAGE",
+      "BOOSTER",
+      "OPENTYPE",
+      "HERMETIC",
+      "SEMIHERMETIC",
+      "WELDEDSHELLHERMETIC",
+      "ROLLINGPISTON",
+      "ROTARYVANE",
+      "SINGLESCREW",
+      "TWINSCREW",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCondenser",
+    "enumeration": [
+      "AIRCOOLED",
+      "EVAPORATIVECOOLED",
+      "WATERCOOLED",
+      "WATERCOOLEDBRAZEDPLATE",
+      "WATERCOOLEDSHELLCOIL",
+      "WATERCOOLEDSHELLTUBE",
+      "WATERCOOLEDTUBEINTUBE",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcController",
+    "enumeration": [
+      "FLOATING",
+      "PROGRAMMABLE",
+      "PROPORTIONAL",
+      "MULTIPOSITION",
+      "TWOPOSITION",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCooledBeam",
+    "enumeration": [
+      "ACTIVE",
+      "PASSIVE",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCoolingTower",
+    "enumeration": [
+      "NATURALDRAFT",
+      "MECHANICALINDUCEDDRAFT",
+      "MECHANICALFORCEDDRAFT",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCovering",
+    "enumeration": [
+      "CEILING",
+      "FLOORING",
+      "CLADDING",
+      "ROOFING",
+      "MOLDING",
+      "SKIRTINGBOARD",
+      "INSULATION",
+      "MEMBRANE",
+      "SLEEVING",
+      "WRAPPING",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCurtainWall",
+    "enumeration": [
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcDamper",
+    "enumeration": [
+      "BACKDRAFTDAMPER",
+      "BALANCINGDAMPER",
+      "BLASTDAMPER",
+      "CONTROLDAMPER",
+      "FIREDAMPER",
+      "FIRESMOKEDAMPER",
+      "FUMEHOODEXHAUST",
+      "GRAVITYDAMPER",
+      "GRAVITYRELIEFDAMPER",
+      "RELIEFDAMPER",
+      "SMOKEDAMPER",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcDiscreteAccessory",
+    "enumeration": [
+      "ANCHORPLATE",
+      "BRACKET",
+      "SHOE",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcDistributionChamberElement",
+    "enumeration": [
+      "FORMEDDUCT",
+      "INSPECTIONCHAMBER",
+      "INSPECTIONPIT",
+      "MANHOLE",
+      "METERCHAMBER",
+      "SUMP",
+      "TRENCH",
+      "VALVECHAMBER",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcDistributionSystem",
+    "enumeration": [
+      "AIRCONDITIONING",
+      "AUDIOVISUAL",
+      "CHEMICAL",
+      "CHILLEDWATER",
+      "COMMUNICATION",
+      "COMPRESSEDAIR",
+      "CONDENSERWATER",
+      "CONTROL",
+      "CONVEYING",
+      "DATA",
+      "DISPOSAL",
+      "DOMESTICCOLDWATER",
+      "DOMESTICHOTWATER",
+      "DRAINAGE",
+      "EARTHING",
+      "ELECTRICAL",
+      "ELECTROACOUSTIC",
+      "EXHAUST",
+      "FIREPROTECTION",
+      "FUEL",
+      "GAS",
+      "HAZARDOUS",
+      "HEATING",
+      "LIGHTING",
+      "LIGHTNINGPROTECTION",
+      "MUNICIPALSOLIDWASTE",
+      "OIL",
+      "OPERATIONAL",
+      "POWERGENERATION",
+      "RAINWATER",
+      "REFRIGERATION",
+      "SECURITY",
+      "SEWAGE",
+      "SIGNAL",
+      "STORMWATER",
+      "TELEPHONE",
+      "TV",
+      "VACUUM",
+      "VENT",
+      "VENTILATION",
+      "WASTEWATER",
+      "WATERSUPPLY",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "LongName",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcDoor",
+    "enumeration": [
+      "DOOR",
+      "GATE",
+      "TRAPDOOR",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "OverallHeight",
+      "OverallWidth",
+      "PredefinedType",
+      "OperationType",
+      "UserDefinedOperationType"
+    ]
+  },
+  {
+    "name": "IfcDuctFitting",
+    "enumeration": [
+      "BEND",
+      "CONNECTOR",
+      "ENTRY",
+      "EXIT",
+      "JUNCTION",
+      "OBSTRUCTION",
+      "TRANSITION",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcDuctSegment",
+    "enumeration": [
+      "RIGIDSEGMENT",
+      "FLEXIBLESEGMENT",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcDuctSilencer",
+    "enumeration": [
+      "FLATOVAL",
+      "RECTANGULAR",
+      "ROUND",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcElectricAppliance",
+    "enumeration": [
+      "DISHWASHER",
+      "ELECTRICCOOKER",
+      "FREESTANDINGELECTRICHEATER",
+      "FREESTANDINGFAN",
+      "FREESTANDINGWATERHEATER",
+      "FREESTANDINGWATERCOOLER",
+      "FREEZER",
+      "FRIDGE_FREEZER",
+      "HANDDRYER",
+      "KITCHENMACHINE",
+      "MICROWAVE",
+      "PHOTOCOPIER",
+      "REFRIGERATOR",
+      "TUMBLEDRYER",
+      "VENDINGMACHINE",
+      "WASHINGMACHINE",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcElectricDistributionBoard",
+    "enumeration": [
+      "CONSUMERUNIT",
+      "DISTRIBUTIONBOARD",
+      "MOTORCONTROLCENTRE",
+      "SWITCHBOARD",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcElectricFlowStorageDevice",
+    "enumeration": [
+      "BATTERY",
+      "CAPACITORBANK",
+      "HARMONICFILTER",
+      "INDUCTORBANK",
+      "UPS",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcElectricGenerator",
+    "enumeration": [
+      "CHP",
+      "ENGINEGENERATOR",
+      "STANDALONE",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcElectricMotor",
+    "enumeration": [
+      "DC",
+      "INDUCTION",
+      "POLYPHASE",
+      "RELUCTANCESYNCHRONOUS",
+      "SYNCHRONOUS",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcElectricTimeControl",
+    "enumeration": [
+      "TIMECLOCK",
+      "TIMEDELAY",
+      "RELAY",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcElementAssembly",
+    "enumeration": [
+      "ACCESSORY_ASSEMBLY",
+      "ARCH",
+      "BEAM_GRID",
+      "BRACED_FRAME",
+      "GIRDER",
+      "REINFORCEMENT_UNIT",
+      "RIGID_FRAME",
+      "SLAB_FIELD",
+      "TRUSS",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "AssemblyPlace",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcEngine",
+    "enumeration": [
+      "EXTERNALCOMBUSTION",
+      "INTERNALCOMBUSTION",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcEvaporativeCooler",
+    "enumeration": [
+      "DIRECTEVAPORATIVERANDOMMEDIAAIRCOOLER",
+      "DIRECTEVAPORATIVERIGIDMEDIAAIRCOOLER",
+      "DIRECTEVAPORATIVESLINGERSPACKAGEDAIRCOOLER",
+      "DIRECTEVAPORATIVEPACKAGEDROTARYAIRCOOLER",
+      "DIRECTEVAPORATIVEAIRWASHER",
+      "INDIRECTEVAPORATIVEPACKAGEAIRCOOLER",
+      "INDIRECTEVAPORATIVEWETCOIL",
+      "INDIRECTEVAPORATIVECOOLINGTOWERORCOILCOOLER",
+      "INDIRECTDIRECTCOMBINATION",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcEvaporator",
+    "enumeration": [
+      "DIRECTEXPANSION",
+      "DIRECTEXPANSIONSHELLANDTUBE",
+      "DIRECTEXPANSIONTUBEINTUBE",
+      "DIRECTEXPANSIONBRAZEDPLATE",
+      "FLOODEDSHELLANDTUBE",
+      "SHELLANDCOIL",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcFan",
+    "enumeration": [
+      "CENTRIFUGALFORWARDCURVED",
+      "CENTRIFUGALRADIAL",
+      "CENTRIFUGALBACKWARDINCLINEDCURVED",
+      "CENTRIFUGALAIRFOIL",
+      "TUBEAXIAL",
+      "VANEAXIAL",
+      "PROPELLORAXIAL",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcFastener",
+    "enumeration": [
+      "GLUE",
+      "MORTAR",
+      "WELD",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcFilter",
+    "enumeration": [
+      "AIRPARTICLEFILTER",
+      "COMPRESSEDAIRFILTER",
+      "ODORFILTER",
+      "OILFILTER",
+      "STRAINER",
+      "WATERFILTER",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcFireSuppressionTerminal",
+    "enumeration": [
+      "BREECHINGINLET",
+      "FIREHYDRANT",
+      "HOSEREEL",
+      "SPRINKLER",
+      "SPRINKLERDEFLECTOR",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcFlowInstrument",
+    "enumeration": [
+      "PRESSUREGAUGE",
+      "THERMOMETER",
+      "AMMETER",
+      "FREQUENCYMETER",
+      "POWERFACTORMETER",
+      "PHASEANGLEMETER",
+      "VOLTMETER_PEAK",
+      "VOLTMETER_RMS",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcFlowMeter",
+    "enumeration": [
+      "ENERGYMETER",
+      "GASMETER",
+      "OILMETER",
+      "WATERMETER",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcFooting",
+    "enumeration": [
+      "CAISSON_FOUNDATION",
+      "FOOTING_BEAM",
+      "PAD_FOOTING",
+      "PILE_CAP",
+      "STRIP_FOOTING",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcFurniture",
+    "enumeration": [
+      "CHAIR",
+      "TABLE",
+      "DESK",
+      "BED",
+      "FILECABINET",
+      "SHELF",
+      "SOFA",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcGeographicElement",
+    "enumeration": [
+      "TERRAIN",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcHeatExchanger",
+    "enumeration": [
+      "PLATE",
+      "SHELLANDTUBE",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcHumidifier",
+    "enumeration": [
+      "STEAMINJECTION",
+      "ADIABATICAIRWASHER",
+      "ADIABATICPAN",
+      "ADIABATICWETTEDELEMENT",
+      "ADIABATICATOMIZING",
+      "ADIABATICULTRASONIC",
+      "ADIABATICRIGIDMEDIA",
+      "ADIABATICCOMPRESSEDAIRNOZZLE",
+      "ASSISTEDELECTRIC",
+      "ASSISTEDNATURALGAS",
+      "ASSISTEDPROPANE",
+      "ASSISTEDBUTANE",
+      "ASSISTEDSTEAM",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcInterceptor",
+    "enumeration": [
+      "CYCLONIC",
+      "GREASE",
+      "OIL",
+      "PETROL",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcJunctionBox",
+    "enumeration": [
+      "DATA",
+      "POWER",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcLamp",
+    "enumeration": [
+      "COMPACTFLUORESCENT",
+      "FLUORESCENT",
+      "HALOGEN",
+      "HIGHPRESSUREMERCURY",
+      "HIGHPRESSURESODIUM",
+      "LED",
+      "METALHALIDE",
+      "OLED",
+      "TUNGSTENFILAMENT",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcLightFixture",
+    "enumeration": [
+      "POINTSOURCE",
+      "DIRECTIONSOURCE",
+      "SECURITYLIGHTING",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcMechanicalFastener",
+    "enumeration": [
+      "ANCHORBOLT",
+      "BOLT",
+      "DOWEL",
+      "NAIL",
+      "NAILPLATE",
+      "RIVET",
+      "SCREW",
+      "SHEARCONNECTOR",
+      "STAPLE",
+      "STUDSHEARCONNECTOR",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "NominalDiameter",
+      "NominalLength",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcMedicalDevice",
+    "enumeration": [
+      "AIRSTATION",
+      "FEEDAIRUNIT",
+      "OXYGENGENERATOR",
+      "OXYGENPLANT",
+      "VACUUMSTATION",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcMember",
+    "enumeration": [
+      "BRACE",
+      "CHORD",
+      "COLLAR",
+      "MEMBER",
+      "MULLION",
+      "PLATE",
+      "POST",
+      "PURLIN",
+      "RAFTER",
+      "STRINGER",
+      "STRUT",
+      "STUD",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcMotorConnection",
+    "enumeration": [
+      "BELTDRIVE",
+      "COUPLING",
+      "DIRECTDRIVE",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcOpeningElement",
+    "enumeration": [
+      "OPENING",
+      "RECESS",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcOutlet",
+    "enumeration": [
+      "AUDIOVISUALOUTLET",
+      "COMMUNICATIONSOUTLET",
+      "POWEROUTLET",
+      "DATAOUTLET",
+      "TELEPHONEOUTLET",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcPile",
+    "enumeration": [
+      "BORED",
+      "DRIVEN",
+      "JETGROUTING",
+      "COHESION",
+      "FRICTION",
+      "SUPPORT",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType",
+      "ConstructionType"
+    ]
+  },
+  {
+    "name": "IfcPipeFitting",
+    "enumeration": [
+      "BEND",
+      "CONNECTOR",
+      "ENTRY",
+      "EXIT",
+      "JUNCTION",
+      "OBSTRUCTION",
+      "TRANSITION",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcPipeSegment",
+    "enumeration": [
+      "CULVERT",
+      "FLEXIBLESEGMENT",
+      "RIGIDSEGMENT",
+      "GUTTER",
+      "SPOOL",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcPlate",
+    "enumeration": [
+      "CURTAIN_PANEL",
+      "SHEET",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcProjectionElement",
+    "enumeration": [
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcProtectiveDevice",
+    "enumeration": [
+      "CIRCUITBREAKER",
+      "EARTHLEAKAGECIRCUITBREAKER",
+      "EARTHINGSWITCH",
+      "FUSEDISCONNECTOR",
+      "RESIDUALCURRENTCIRCUITBREAKER",
+      "RESIDUALCURRENTSWITCH",
+      "VARISTOR",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcProtectiveDeviceTrippingUnit",
+    "enumeration": [
+      "ELECTRONIC",
+      "ELECTROMAGNETIC",
+      "RESIDUALCURRENT",
+      "THERMAL",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcPump",
+    "enumeration": [
+      "CIRCULATOR",
+      "ENDSUCTION",
+      "SPLITCASE",
+      "SUBMERSIBLEPUMP",
+      "SUMPPUMP",
+      "VERTICALINLINE",
+      "VERTICALTURBINE",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcRailing",
+    "enumeration": [
+      "HANDRAIL",
+      "GUARDRAIL",
+      "BALUSTRADE",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcRamp",
+    "enumeration": [
+      "STRAIGHT_RUN_RAMP",
+      "TWO_STRAIGHT_RUN_RAMP",
+      "QUARTER_TURN_RAMP",
+      "TWO_QUARTER_TURN_RAMP",
+      "HALF_TURN_RAMP",
+      "SPIRAL_RAMP",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcRampFlight",
+    "enumeration": [
+      "STRAIGHT",
+      "SPIRAL",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcReinforcingElement",
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "SteelGrade"
+    ]
+  },
+  {
+    "name": "IfcRoof",
+    "enumeration": [
+      "FLAT_ROOF",
+      "SHED_ROOF",
+      "GABLE_ROOF",
+      "HIP_ROOF",
+      "HIPPED_GABLE_ROOF",
+      "GAMBREL_ROOF",
+      "MANSARD_ROOF",
+      "BARREL_ROOF",
+      "RAINBOW_ROOF",
+      "BUTTERFLY_ROOF",
+      "PAVILION_ROOF",
+      "DOME_ROOF",
+      "FREEFORM",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSanitaryTerminal",
+    "enumeration": [
+      "BATH",
+      "BIDET",
+      "CISTERN",
+      "SHOWER",
+      "SINK",
+      "SANITARYFOUNTAIN",
+      "TOILETPAN",
+      "URINAL",
+      "WASHHANDBASIN",
+      "WCSEAT",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSensor",
+    "enumeration": [
+      "COSENSOR",
+      "CO2SENSOR",
+      "CONDUCTANCESENSOR",
+      "CONTACTSENSOR",
+      "FIRESENSOR",
+      "FLOWSENSOR",
+      "FROSTSENSOR",
+      "GASSENSOR",
+      "HEATSENSOR",
+      "HUMIDITYSENSOR",
+      "IDENTIFIERSENSOR",
+      "IONCONCENTRATIONSENSOR",
+      "LEVELSENSOR",
+      "LIGHTSENSOR",
+      "MOISTURESENSOR",
+      "MOVEMENTSENSOR",
+      "PHSENSOR",
+      "PRESSURESENSOR",
+      "RADIATIONSENSOR",
+      "RADIOACTIVITYSENSOR",
+      "SMOKESENSOR",
+      "SOUNDSENSOR",
+      "TEMPERATURESENSOR",
+      "WINDSENSOR",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcShadingDevice",
+    "enumeration": [
+      "JALOUSIE",
+      "SHUTTER",
+      "AWNING",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSite",
+    "attributes": [
+      "CompositionType",
+      "LongName",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "RefLatitude",
+      "RefLongitude",
+      "RefElevation",
+      "LandTitleNumber"
+    ]
+  },
+  {
+    "name": "IfcSlab",
+    "enumeration": [
+      "FLOOR",
+      "ROOF",
+      "LANDING",
+      "BASESLAB",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSolarDevice",
+    "enumeration": [
+      "SOLARCOLLECTOR",
+      "SOLARPANEL",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSpace",
+    "enumeration": [
+      "SPACE",
+      "PARKING",
+      "GFA",
+      "INTERNAL",
+      "EXTERNAL",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "CompositionType",
+      "LongName",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType",
+      "ElevationWithFlooring"
+    ]
+  },
+  {
+    "name": "IfcSpaceHeater",
+    "enumeration": [
+      "CONVECTOR",
+      "RADIATOR",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSpatialStructureElement",
+    "attributes": [
+      "LongName",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "CompositionType"
+    ]
+  },
+  {
+    "name": "IfcSpatialZone",
+    "enumeration": [
+      "CONSTRUCTION",
+      "FIRESAFETY",
+      "LIGHTING",
+      "OCCUPANCY",
+      "SECURITY",
+      "THERMAL",
+      "TRANSPORT",
+      "VENTILATION",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "LongName",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcStackTerminal",
+    "enumeration": [
+      "BIRDCAGE",
+      "COWL",
+      "RAINWATERHOPPER",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcStair",
+    "enumeration": [
+      "STRAIGHT_RUN_STAIR",
+      "TWO_STRAIGHT_RUN_STAIR",
+      "QUARTER_WINDING_STAIR",
+      "QUARTER_TURN_STAIR",
+      "HALF_WINDING_STAIR",
+      "HALF_TURN_STAIR",
+      "TWO_QUARTER_WINDING_STAIR",
+      "TWO_QUARTER_TURN_STAIR",
+      "THREE_QUARTER_WINDING_STAIR",
+      "THREE_QUARTER_TURN_STAIR",
+      "SPIRAL_STAIR",
+      "DOUBLE_RETURN_STAIR",
+      "CURVED_RUN_STAIR",
+      "TWO_CURVED_RUN_STAIR",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcStairFlight",
+    "enumeration": [
+      "STRAIGHT",
+      "WINDER",
+      "SPIRAL",
+      "CURVED",
+      "FREEFORM",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "NumberOfRisers",
+      "NumberOfTreads",
+      "RiserHeight",
+      "TreadLength",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcStructuralAnalysisModel",
+    "attributes": [
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSwitchingDevice",
+    "enumeration": [
+      "CONTACTOR",
+      "DIMMERSWITCH",
+      "EMERGENCYSTOP",
+      "KEYPAD",
+      "MOMENTARYSWITCH",
+      "SELECTORSWITCH",
+      "STARTER",
+      "SWITCHDISCONNECTOR",
+      "TOGGLESWITCH",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSystemFurnitureElement",
+    "enumeration": [
+      "PANEL",
+      "WORKSURFACE",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcTank",
+    "enumeration": [
+      "BASIN",
+      "BREAKPRESSURE",
+      "EXPANSION",
+      "FEEDANDEXPANSION",
+      "PRESSUREVESSEL",
+      "STORAGE",
+      "VESSEL",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcTransformer",
+    "enumeration": [
+      "CURRENT",
+      "FREQUENCY",
+      "INVERTER",
+      "RECTIFIER",
+      "VOLTAGE",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcTransportElement",
+    "enumeration": [
+      "ELEVATOR",
+      "ESCALATOR",
+      "MOVINGWALKWAY",
+      "CRANEWAY",
+      "LIFTINGGEAR",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcTubeBundle",
+    "enumeration": [
+      "FINNED",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcUnitaryControlElement",
+    "enumeration": [
+      "ALARMPANEL",
+      "CONTROLPANEL",
+      "GASDETECTIONPANEL",
+      "INDICATORPANEL",
+      "MIMICPANEL",
+      "HUMIDISTAT",
+      "THERMOSTAT",
+      "WEATHERSTATION",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcUnitaryEquipment",
+    "enumeration": [
+      "AIRHANDLER",
+      "AIRCONDITIONINGUNIT",
+      "DEHUMIDIFIER",
+      "SPLITSYSTEM",
+      "ROOFTOPUNIT",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcValve",
+    "enumeration": [
+      "AIRRELEASE",
+      "ANTIVACUUM",
+      "CHANGEOVER",
+      "CHECK",
+      "COMMISSIONING",
+      "DIVERTING",
+      "DRAWOFFCOCK",
+      "DOUBLECHECK",
+      "DOUBLEREGULATING",
+      "FAUCET",
+      "FLUSHING",
+      "GASCOCK",
+      "GASTAP",
+      "ISOLATING",
+      "MIXING",
+      "PRESSUREREDUCING",
+      "PRESSURERELIEF",
+      "REGULATING",
+      "SAFETYCUTOFF",
+      "STEAMTRAP",
+      "STOPCOCK",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcVibrationIsolator",
+    "enumeration": [
+      "COMPRESSION",
+      "SPRING",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcVoidingFeature",
+    "enumeration": [
+      "CUTOUT",
+      "NOTCH",
+      "HOLE",
+      "MITER",
+      "CHAMFER",
+      "EDGE",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcWall",
+    "enumeration": [
+      "MOVABLE",
+      "PARAPET",
+      "PARTITIONING",
+      "PLUMBINGWALL",
+      "SHEAR",
+      "SOLIDWALL",
+      "STANDARD",
+      "POLYGONAL",
+      "ELEMENTEDWALL",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcWasteTerminal",
+    "enumeration": [
+      "FLOORTRAP",
+      "FLOORWASTE",
+      "GULLYSUMP",
+      "GULLYTRAP",
+      "ROOFDRAIN",
+      "WASTEDISPOSALUNIT",
+      "WASTETRAP",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcWindow",
+    "enumeration": [
+      "WINDOW",
+      "SKYLIGHT",
+      "LIGHTDOME",
+      "USERDEFINED",
+      "NOTDEFINED"
+    ],
+    "attributes": [
+      "Tag",
+      "ObjectPlacement",
+      "Representation",
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "OverallHeight",
+      "OverallWidth",
+      "PredefinedType",
+      "PartitioningType",
+      "UserDefinedPartitioningType"
+    ]
+  },
+  {
+    "name": "IfcZone",
+    "attributes": [
+      "ObjectType",
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "LongName"
+    ]
+  }
+]

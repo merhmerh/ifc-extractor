@@ -1,0 +1,802 @@
+[
+  {
+    "name": "IfcActuator",
+    "base": "ifc:IfcDistributionControlElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcAirTerminal",
+    "base": "ifc:IfcFlowTerminal",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcAirTerminalBox",
+    "base": "ifc:IfcFlowController",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcAirToAirHeatRecovery",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcAlarm",
+    "base": "ifc:IfcDistributionControlElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcAudioVisualAppliance",
+    "base": "ifc:IfcFlowTerminal",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcBeam",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcBoiler",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcBuilding",
+    "base": "ifc:IfcSpatialStructureElement",
+    "attribute": [
+      "ElevationOfRefHeight",
+      "ElevationOfTerrain"
+    ]
+  },
+  {
+    "name": "IfcBuildingElementPart",
+    "base": "ifc:IfcElementComponent",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcBuildingElementProxy",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcBuildingStorey",
+    "base": "ifc:IfcSpatialStructureElement",
+    "attribute": [
+      "Elevation"
+    ]
+  },
+  {
+    "name": "IfcBuildingSystem",
+    "base": "ifc:IfcSystem",
+    "attribute": [
+      "PredefinedType",
+      "LongName"
+    ]
+  },
+  {
+    "name": "IfcBurner",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCableCarrierFitting",
+    "base": "ifc:IfcFlowFitting",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCableCarrierSegment",
+    "base": "ifc:IfcFlowSegment",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCableFitting",
+    "base": "ifc:IfcFlowFitting",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCableSegment",
+    "base": "ifc:IfcFlowSegment",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcChiller",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcChimney",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCoil",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcColumn",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCommunicationsAppliance",
+    "base": "ifc:IfcFlowTerminal",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCompressor",
+    "base": "ifc:IfcFlowMovingDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCondenser",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcController",
+    "base": "ifc:IfcDistributionControlElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCooledBeam",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCoolingTower",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCovering",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCurtainWall",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcDamper",
+    "base": "ifc:IfcFlowController",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcDiscreteAccessory",
+    "base": "ifc:IfcElementComponent",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcDistributionChamberElement",
+    "base": "ifc:IfcDistributionFlowElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcDistributionSystem",
+    "base": "ifc:IfcSystem",
+    "attribute": [
+      "LongName",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcDoor",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "OverallHeight",
+      "OverallWidth",
+      "PredefinedType",
+      "OperationType",
+      "UserDefinedOperationType"
+    ]
+  },
+  {
+    "name": "IfcDuctFitting",
+    "base": "ifc:IfcFlowFitting",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcDuctSegment",
+    "base": "ifc:IfcFlowSegment",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcDuctSilencer",
+    "base": "ifc:IfcFlowTreatmentDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcElectricAppliance",
+    "base": "ifc:IfcFlowTerminal",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcElectricDistributionBoard",
+    "base": "ifc:IfcFlowController",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcElectricFlowStorageDevice",
+    "base": "ifc:IfcFlowStorageDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcElectricGenerator",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcElectricMotor",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcElectricTimeControl",
+    "base": "ifc:IfcFlowController",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcElementAssembly",
+    "base": "ifc:IfcElement",
+    "attribute": [
+      "AssemblyPlace",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcEngine",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcEvaporativeCooler",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcEvaporator",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcFan",
+    "base": "ifc:IfcFlowMovingDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcFastener",
+    "base": "ifc:IfcElementComponent",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcFilter",
+    "base": "ifc:IfcFlowTreatmentDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcFireSuppressionTerminal",
+    "base": "ifc:IfcFlowTerminal",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcFlowInstrument",
+    "base": "ifc:IfcDistributionControlElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcFlowMeter",
+    "base": "ifc:IfcFlowController",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcFooting",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcFurniture",
+    "base": "ifc:IfcFurnishingElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcGeographicElement",
+    "base": "ifc:IfcElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcHeatExchanger",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcHumidifier",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcInterceptor",
+    "base": "ifc:IfcFlowTreatmentDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcJunctionBox",
+    "base": "ifc:IfcFlowFitting",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcLamp",
+    "base": "ifc:IfcFlowTerminal",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcLightFixture",
+    "base": "ifc:IfcFlowTerminal",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcMechanicalFastener",
+    "base": "ifc:IfcElementComponent",
+    "attribute": [
+      "NominalDiameter",
+      "NominalLength",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcMedicalDevice",
+    "base": "ifc:IfcFlowTerminal",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcMember",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcMotorConnection",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcOpeningElement",
+    "base": "ifc:IfcFeatureElementSubtraction",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcOutlet",
+    "base": "ifc:IfcFlowTerminal",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcPile",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "PredefinedType",
+      "ConstructionType"
+    ]
+  },
+  {
+    "name": "IfcPipeFitting",
+    "base": "ifc:IfcFlowFitting",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcPipeSegment",
+    "base": "ifc:IfcFlowSegment",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcPlate",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcProjectionElement",
+    "base": "ifc:IfcFeatureElementAddition",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcProtectiveDevice",
+    "base": "ifc:IfcFlowController",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcProtectiveDeviceTrippingUnit",
+    "base": "ifc:IfcDistributionControlElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcPump",
+    "base": "ifc:IfcFlowMovingDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcRailing",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcRamp",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcRampFlight",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcReinforcingElement",
+    "base": "ifc:IfcElementComponent",
+    "attribute": [
+      "SteelGrade"
+    ]
+  },
+  {
+    "name": "IfcRoof",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSanitaryTerminal",
+    "base": "ifc:IfcFlowTerminal",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSensor",
+    "base": "ifc:IfcDistributionControlElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcShadingDevice",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSite",
+    "base": "ifc:IfcSpatialStructureElement",
+    "attribute": [
+      "RefLatitude",
+      "RefLongitude",
+      "RefElevation",
+      "LandTitleNumber"
+    ]
+  },
+  {
+    "name": "IfcSlab",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSolarDevice",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSpace",
+    "base": "ifc:IfcSpatialStructureElement",
+    "attribute": [
+      "PredefinedType",
+      "ElevationWithFlooring"
+    ]
+  },
+  {
+    "name": "IfcSpaceHeater",
+    "base": "ifc:IfcFlowTerminal",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSpatialStructureElement",
+    "base": "ifc:IfcSpatialElement",
+    "attribute": [
+      "CompositionType"
+    ]
+  },
+  {
+    "name": "IfcSpatialZone",
+    "base": "ifc:IfcSpatialElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcStackTerminal",
+    "base": "ifc:IfcFlowTerminal",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcStair",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcStairFlight",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "NumberOfRisers",
+      "NumberOfTreads",
+      "RiserHeight",
+      "TreadLength",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcStructuralAnalysisModel",
+    "base": "ifc:IfcSystem",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSwitchingDevice",
+    "base": "ifc:IfcFlowController",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSystemFurnitureElement",
+    "base": "ifc:IfcFurnishingElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcTank",
+    "base": "ifc:IfcFlowStorageDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcTransformer",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcTransportElement",
+    "base": "ifc:IfcElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcTubeBundle",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcUnitaryControlElement",
+    "base": "ifc:IfcDistributionControlElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcUnitaryEquipment",
+    "base": "ifc:IfcEnergyConversionDevice",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcValve",
+    "base": "ifc:IfcFlowController",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcVibrationIsolator",
+    "base": "ifc:IfcElementComponent",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcVoidingFeature",
+    "base": "ifc:IfcFeatureElementSubtraction",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcWall",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcWasteTerminal",
+    "base": "ifc:IfcFlowTerminal",
+    "attribute": [
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcWindow",
+    "base": "ifc:IfcBuildingElement",
+    "attribute": [
+      "OverallHeight",
+      "OverallWidth",
+      "PredefinedType",
+      "PartitioningType",
+      "UserDefinedPartitioningType"
+    ]
+  },
+  {
+    "name": "IfcZone",
+    "base": "ifc:IfcSystem",
+    "attribute": [
+      "LongName"
+    ]
+  }
+]

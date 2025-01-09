@@ -1,0 +1,1089 @@
+[
+  {
+    "name": "IfcBeam",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcBeamType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcBuilding",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "LongName",
+      "CompositionType"
+    ]
+  },
+  {
+    "name": "IfcBuildingElement",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag"
+    ]
+  },
+  {
+    "name": "IfcBuildingElementProxy",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcBuildingElementProxyType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcBuildingElementType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType"
+    ]
+  },
+  {
+    "name": "IfcBuildingStorey",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "LongName",
+      "CompositionType",
+      "Elevation"
+    ]
+  },
+  {
+    "name": "IfcBuildingSystem",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "PredefinedType",
+      "LongName"
+    ]
+  },
+  {
+    "name": "IfcChimney",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcChimneyType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCivilElement",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag"
+    ]
+  },
+  {
+    "name": "IfcCivilElementType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType"
+    ]
+  },
+  {
+    "name": "IfcColumn",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcColumnType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCovering",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCoveringType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCurtainWall",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcCurtainWallType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcDistributionControlElementType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType"
+    ]
+  },
+  {
+    "name": "IfcDistributionElement",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag"
+    ]
+  },
+  {
+    "name": "IfcDistributionElementType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType"
+    ]
+  },
+  {
+    "name": "IfcDistributionFlowElementType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType"
+    ]
+  },
+  {
+    "name": "IfcDistributionSystem",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "LongName",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcDoor",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "OverallHeight",
+      "OverallWidth",
+      "PredefinedType",
+      "OperationType",
+      "UserDefinedOperationType"
+    ]
+  },
+  {
+    "name": "IfcDoorType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType",
+      "OperationType",
+      "ParameterTakesPrecedence",
+      "UserDefinedOperationType"
+    ]
+  },
+  {
+    "name": "IfcElementAssembly",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "AssemblyPlace",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcElementAssemblyType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcElementComponent",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag"
+    ]
+  },
+  {
+    "name": "IfcElementComponentType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType"
+    ]
+  },
+  {
+    "name": "IfcExternalSpatialStructureElement",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "LongName"
+    ]
+  },
+  {
+    "name": "IfcFeatureElement",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag"
+    ]
+  },
+  {
+    "name": "IfcFooting",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcFootingType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcFurnishingElement",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag"
+    ]
+  },
+  {
+    "name": "IfcFurnishingElementType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType"
+    ]
+  },
+  {
+    "name": "IfcGeographicElement",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcGeographicElementType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcMember",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcMemberType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcPile",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType",
+      "ConstructionType"
+    ]
+  },
+  {
+    "name": "IfcPileType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcPlate",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcPlateType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcRailing",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcRailingType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcRamp",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcRampFlight",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcRampFlightType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcRampType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcRoof",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcRoofType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcShadingDevice",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcShadingDeviceType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSite",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "LongName",
+      "CompositionType"
+    ]
+  },
+  {
+    "name": "IfcSlab",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSlabType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSpace",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "LongName",
+      "CompositionType",
+      "PredefinedType",
+      "ElevationWithFlooring"
+    ]
+  },
+  {
+    "name": "IfcSpaceType",
+    "attributes": [
+      "PredefinedType",
+      "LongName"
+    ]
+  },
+  {
+    "name": "IfcSpatialStructureElement",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "LongName",
+      "CompositionType"
+    ]
+  },
+  {
+    "name": "IfcSpatialStructureElementType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType"
+    ]
+  },
+  {
+    "name": "IfcSpatialZone",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "LongName",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcSpatialZoneType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType",
+      "LongName"
+    ]
+  },
+  {
+    "name": "IfcStair",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcStairFlight",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "NumberOfRisers",
+      "NumberOfTreads",
+      "RiserHeight",
+      "TreadLength",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcStairFlightType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcStairType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcStructuralAnalysisModel",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType"
+    ]
+  },
+  {
+    "name": "IfcTransportElement",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcTransportElementType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcVirtualElement",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag"
+    ]
+  },
+  {
+    "name": "IfcWall",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcWallType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType"
+    ]
+  },
+  {
+    "name": "IfcWindow",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "ObjectPlacement",
+      "Representation",
+      "Tag",
+      "OverallHeight",
+      "OverallWidth",
+      "PredefinedType",
+      "PartitioningType",
+      "UserDefinedPartitioningType"
+    ]
+  },
+  {
+    "name": "IfcWindowType",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ApplicableOccurrence",
+      "HasPropertySets",
+      "RepresentationMaps",
+      "Tag",
+      "ElementType",
+      "PredefinedType",
+      "PartitioningType",
+      "ParameterTakesPrecedence",
+      "UserDefinedPartitioningType"
+    ]
+  },
+  {
+    "name": "IfcZone",
+    "attributes": [
+      "GlobalId",
+      "OwnerHistory",
+      "Name",
+      "Description",
+      "ObjectType",
+      "LongName"
+    ]
+  }
+]
