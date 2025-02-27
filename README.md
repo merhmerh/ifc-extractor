@@ -1,3 +1,17 @@
+# Project Status Update
+
+This project is no longer being actively developed, as we have moved on to a new platform: [BuiltSearch IV](https://iv.builtsearch.com). The new platform leverages our next-generation extractor, which provides improved accuracy and performance. However, please note that it is not longer open-source.
+
+### Limitations of the Current Extractor
+
+While the current extractor was an important step in our journey, it does have limitations. There are bugs that hinder its ability to capture all elements accurately, and certain edge cases remain unresolved. As a result, the current extractor may not work as intended in all scenarios, and we recommend exploring alternatives or the next-generation solution on [BuiltSearch IV](https://iv.builtsearch.com) for a more robust experience.
+
+### Archival Notice
+
+This repository will be archived and is no longer open for contributions or updates. Archiving means the repository will be in a read-only state, and no further changes can be made (such as pushing new commits, creating issues, or opening pull requests). The code will remain available for reference, but it will no longer be maintained.
+
+---
+
 ![Logo](static/assets/logo_full.svg)
 
 Web Worker for extracting properties from IFC Model.
